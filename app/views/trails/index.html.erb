@@ -1,0 +1,5 @@
+<h1>Trails</h1>
+
+<% @trails.each do |trail| %>
+<%= link_to trail.name, trail_path(trail) %>
+<% end %>

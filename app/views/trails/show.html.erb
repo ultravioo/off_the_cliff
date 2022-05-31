@@ -1,0 +1,19 @@
+<h1><%= @trail.name %></h1>
+
+<h2><%= @trail.location %></h2>
+
+<div>
+<p><strong>Distance:</strong> <%= @trail.distance %> km</p>
+<p><strong>Duration:</strong> <%= @trail.duration %> seconds</p>
+<p><strong>Elevation:</strong> <%= @trail.elevation %> meters</p>
+<p><strong>Difficulty:</strong> <%= @trail.difficulty %></p>
+<p><strong>Description:</strong> <%= @trail.description %></p>
+
+<%= link_to "trails", trails_path %>
+
+<% @trail.points.each do |point| %>
+<%= point.id %>
+<%= point.latitude %>
+<%= point.longitude %>
+<% end%>
+</div>
