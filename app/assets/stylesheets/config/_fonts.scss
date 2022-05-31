@@ -1,9 +1,12 @@
 // Import Google fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito:400,700|Work+Sans:400,700&display=swap');
+// Title font
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+// Text font
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
 
 // Define fonts for body and headers
-$body-font: "Work Sans", "Helvetica", "sans-serif";
-$headers-font: "Nunito", "Helvetica", "sans-serif";
+$title-font: "League Spartan", sans-serif;
+$text-font: "Koulen", cursive;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
