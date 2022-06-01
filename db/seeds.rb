@@ -69,3 +69,5 @@ csv4.each do |row|
   point.save!
   puts "Point #{point.id} saved!"
 end
+
+pin1 = Pin.create!(latitude: 36.70474000, longitude: -5.42274000, trail: salto, description: "dangerous dangerous dangerous dangerous !!!!!!!", kind: "Warning")
