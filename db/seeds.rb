@@ -13,3 +13,4 @@ salto = Trail.create(name: "Salto del cabrero", distance: 8, duration: 1000, ele
 point1 = Point.create(latitude: 36.70437000, longitude: -5.42289000, elevation: 775, trail: salto)
 point2 = Point.create(latitude: 36.70443000, longitude: -5.42287000, elevation: 775, trail: salto)
 point3 = Point.create(latitude: 36.70474000, longitude: -5.42274000, elevation: 777, trail: salto)
+pin1 = Pin.create!(latitude: 36.70474000, longitude: -5.42274000, trail: salto, description: "dangerous dangerous dangerous dangerous !!!!!!!", kind: "Warning")

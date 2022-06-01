@@ -1,3 +1,5 @@
+<script src="https://kit.fontawesome.com/6eb7b1a5cb.js" crossorigin="anonymous"></script>
+
 <h1><%= @trail.name %></h1>
 
 <h2><%= @trail.location %></h2>
@@ -11,14 +13,11 @@
 
 <%= link_to "trails", trails_path %>
 
-<% @trail.points.each do |point| %>
-<%= point.id %>
-<%= point.latitude %>
-<%= point.longitude %>
-<% end%>
+<i class="fa-solid fa-location-dot"></i>
 
 <div style="width: 100%; height: 600px;"
   data-controller="mapbox"
-  data-mapbox-markers-value="<%= @markers.to_json %>"
+  data-mapbox-points-value="<%= @points.to_json %>"
+  data-mapbox-pins-value="<%= @pins.to_json %>"
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
