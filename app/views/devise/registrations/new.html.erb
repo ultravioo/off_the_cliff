@@ -1,4 +1,10 @@
-<h2>Sign up</h2>
+<h2>register</h2>
+
+<div class="container my-auto">
+
+<div class="row">
+<img  class="img-logo col-12 center-block d-block mx-auto" src="https://res.cloudinary.com/rubberd/image/upload/v1654075412/offthecliff/logo-white_emkdhk.png" alt="logo">
+</div>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
@@ -23,3 +29,5 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+</div>
+ 
