@@ -7,20 +7,28 @@ h1 {
   font-family: "Koulen", cursive;
 }
 
-.card-container-index {
-  display: flex;
-  flex-direction: column;
-  width: 360px;
-  height: 240px;
-  background-color: blue;
-  margin: 10px auto;
+.card-container-main {
+  max-width: 394px;
+  height: 280px;
   background-image: url("https://res.cloudinary.com/rubberd/image/upload/v1654066639/offthecliff/15.2_ur0zbb.jpg");
   background-size: cover;
   box-shadow: 0px 8px 14px -2px rgba(30,30,30,0.5);
-  background-position: center;
   border-radius: 10px;
+  background-position: center;
+}
+
+.card-container-inner {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.77%, rgba(0, 0, 0, 0.4) 45.83%, #000000 100%);
+  border-radius: 10px;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
   justify-content: flex-end;
   padding: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .card-description {
@@ -38,10 +46,16 @@ i {
   color: white;
 }
 
-h1 {
+.card-title {
   font-size: 36px;
   color: white;
   font-weight: 400;
+  text-decoration: none;
+}
+
+.link-title-trail-index {
+  text-decoration: none;
+  color: $white;
 }
 
 p {
@@ -55,3 +69,7 @@ p {
   display: flex;
   padding-right: 20px;
 }
+
+// ROFL
+
+/* TEST */
