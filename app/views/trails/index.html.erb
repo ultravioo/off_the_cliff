@@ -1,5 +1,22 @@
 <h1>Trails</h1>
 
+
+
+
+
 <% @trails.each do |trail| %>
-<%= link_to trail.name, trail_path(trail) %>
+  <div class="card-container-index">
+    <div class="card-title"><h1><%= link_to trail.name, trail_path(trail) %></h1></div>
+    <div class="card-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus cupiditate nemo ex cum esse sapiente labore perspiciatis.</p></div>
+    <div class="card-information">
+      <div class="card-information-time">
+        <i class="fa-solid fa-clock"></i>
+          <p>4:20</p>
+      </div>
+      <div class="card-information-time">
+        <i class="fa-solid fa-person-walking"></i>
+          <p>20 Km</p>
+      </div>
+    </div>
+  </div>
 <% end %>
