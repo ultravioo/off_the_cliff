@@ -1,4 +1,37 @@
-<h1>Pages#home</h1>
-<p>This is a homepage</p>
-<h2>HEKDFASDFADSFADs</h2>
 <%= link_to "trails", trails_path %>
+
+<div class="container my-auto">
+  <div class="row">
+    <img  class="img-logo col-12 center-block d-block mx-auto" src="https://res.cloudinary.com/rubberd/image/upload/v1654075412/offthecliff/logo-white_emkdhk.png" alt="logo">
+    <p class="text-select-login col-12 text-center">Explore new routes, be part of the comunity</p>
+    <div class="col-12 d-flex justify-content-center">
+      <div class="buttons container-login-selector-buttons">
+        <button class="blob-btn">
+          REGISTER
+          <span class="blob-btn__inner">
+            <span class="blob-btn__blobs">
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+              <span class="blob-btn__blob"></span>
+            </span>
+          </span>
+        </button>
+
+        <button class="button-select">
+          LOGIN
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+          <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10"></feGaussianBlur>
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 21 -7" result="goo"></feColorMatrix>
+            <feBlend in2="goo" in="SourceGraphic" result="mix"></feBlend>
+          </filter>
+        </defs>
+        </svg>
