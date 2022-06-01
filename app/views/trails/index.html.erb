@@ -1,5 +1,22 @@
 <h1>Trails</h1>
 
+<div class="container">
 <% @trails.each do |trail| %>
-<%= link_to trail.name, trail_path(trail) %>
+<div class="card-container-main">
+  <div class="card-container-inner">
+    <div class="card-title"><h1><%= link_to trail.name, trail_path(trail), class: "link-title-trail-index" %></h1></div>
+    <div class="card-description"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum repellendus cupiditate nemo ex cum esse sapiente labore perspiciatis.</p></div>
+    <div class="card-information">
+      <div class="card-information-time">
+        <i class="fa-solid fa-clock"></i>
+          <p><%= (trail.duration / 60) %> Minutes</p>
+      </div>
+      <div class="card-information-time">
+        <i class="fa-solid fa-person-walking"></i>
+          <p><%= trail.distance %>Km</p>
+      </div>
+    </div>
+  </div>
+</div>
 <% end %>
+</div>
