@@ -3,10 +3,13 @@
 @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
 // Text font
 @import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+// text font
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
 // Define fonts for body and headers
 $title-font: "League Spartan", sans-serif;
-$text-font: "Koulen", cursive;
+$text-font-koulen: "Koulen", cursive;
+$text-font: "Oswald", sans-serif;
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
