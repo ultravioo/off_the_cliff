@@ -58,12 +58,7 @@ export default class extends Controller {
   addPinsToMap() {
     this.pinsValue.forEach((pin) => {
       const popup = new mapboxgl.Popup().setHTML(pin.info_window)
-    //   const customMarker = document.createElement("div")
-    // customMarker.className = "marker"
-    // customMarker.style.backgroundImage = `url('${marker.image_url}')`
-    // customMarker.style.backgroundSize = "contain"
-    // customMarker.style.width = "25px"
-    // customMarker.style.height = "25px"
+
 
       new mapboxgl.Marker()
         .setLngLat([pin.lng, pin.lat])
