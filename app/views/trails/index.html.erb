@@ -2,7 +2,7 @@
 
 <div class="container">
 <% @trails.each do |trail| %>
-<div class="card-container-main">
+<div class="card-container-main" style="background-image: url('<%= trail.photo.url %>')">
   <div class="card-container-inner">
     <div class="card-title"><h1><%= link_to trail.name, trail_path(trail), class: "link-title-trail-index" %></h1></div>
     <div class="card-description"><p class="card-description-text"><%= trail.description %></p></div>
