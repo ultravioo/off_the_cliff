@@ -90,10 +90,9 @@ h1 {
   padding: 20px;
   text-overflow: ellipsis;
   overflow: hidden;
-  ackground-color: #43816C
 }
 
-.answer {
+button {
   color: white;
   border-radius: 10px;
   width: 50%;
@@ -104,13 +103,13 @@ h1 {
 }
 
 .no {
-  background-color: #FF8000;
-  align-items: center;
+  background-color: $orange;
+  border: $orange;
 }
 
 .yes {
-  background-color: #43816C ;
-  align-items: center;
+  background-color: $light-green ;
+  border: $light-green
 }
 
 .choose-answer {
