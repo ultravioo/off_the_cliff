@@ -1,0 +1,46 @@
+.container-login {
+  max-width: 350px;
+  width: 300px;
+}
+
+.img-logo-login {
+  background-image: url("https://res.cloudinary.com/rubberd/image/upload/v1654075412/offthecliff/logo-white_emkdhk.png");
+  background-position: center;
+  width: 300px;
+  height: 300px;
+}
+
+.form-control {
+  border-radius: 25px;
+}
+
+.form-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#submit-btn {
+  width: 50%;
+  background-color: $dark-green;
+  color: $white;
+  border-radius: 25px;
+  vertical-align: -moz-middle-with-baseline;
+  // padding: 4px 40px;
+}
+
+.submit-btn-login {
+  width: 50%;
+  background-color: $dark-green;
+  color: $white;
+  border-radius: 25px;
+  vertical-align: -moz-middle-with-baseline;
+  text-decoration: none;
+  // padding: 4px 45px;
+  padding: 6px 39px;
+}
+
+.button-shadow{
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
