@@ -27,17 +27,25 @@ monserrate = Trail.create(name: "Monserrate", distance: 5, duration: 14_400, ele
 url2 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654167141/offthecliff/monserrate_cgkrhh.jpg')
 monserrate.photo.attach(io: url2, filename: '2.jpg', content_type: 'images/jpg')
 
-barbizon = Trail.create(name: "Barbizon and Tillaie Reserve Loop", distance: 15, duration: 13_200, elevation: 296, difficulty: "Intermediate", description: "Experience this 15.3-km loop trail near Fontainebleau, Seine-et-Marne. Generally considered a moderately challenging route, it takes an average of 3 h 43 min to complete.", location: "Forêt Domaniale de Fontainebleau", user: user3)
+barbizon = Trail.create(name: "Barbizon and Tillaie Reserve Loop", distance: 15, duration: 13_200, elevation: 296, difficulty: "Intermediate", description: "Experience this 15.3-km loop trail near Fontainebleau, Seine-et-Marne. Generally considered a moderately challenging route, it takes an average of 3 h 43 min to complete.", location: "Forêt Domaniale de Fontainebleau, France", user: user3)
 url3 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654167141/offthecliff/barbizon_xitmum.jpg')
 barbizon.photo.attach(io: url3, filename: '3.jpg', content_type: 'images/jpg')
 
-salto = Trail.create(name: "Salto del cabrero", distance: 8, duration: 8_000, elevation: 479, difficulty: "Beginner", description: "Get to know this 7.6-km point-to-point trail near Benaocaz, Cádiz. Generally considered a moderately challenging route, it takes an average of 2 h 25 min to complete. This trail is great for hiking.", location: "Parque sierra de grazalema", user: user4)
+salto = Trail.create(name: "Salto del cabrero", distance: 8, duration: 8_000, elevation: 479, difficulty: "Beginner", description: "Get to know this 7.6-km point-to-point trail near Benaocaz, Cádiz. Generally considered a moderately challenging route, it takes an average of 2 h 25 min to complete. This trail is great for hiking.", location: "Parque sierra de grazalema, Spain", user: user4)
 url4 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654167141/offthecliff/cabrero_nnxvwe.jpg')
 salto.photo.attach(io: url4, filename: '4.jpg', content_type: 'images/jpg')
 
-gr34 = Trail.create(name: "GR34 Etape 18", distance: 135, duration: 100_800, elevation: 1_259, difficulty: "Pro", description: "Enjoy this 135.0-km point-to-point trail near Le Tour-du-Parc, Morbihan. Generally considered a moderately challenging route, it takes an average of 28 h 2 min to complete. ", location: "regional Natural park of the Gulf of Morbihan", user: user3)
+gr34 = Trail.create(name: "GR34 Etape 18", distance: 135, duration: 100_800, elevation: 1_259, difficulty: "Pro", description: "Enjoy this 135.0-km point-to-point trail near Le Tour-du-Parc, Morbihan. Generally considered a moderately challenging route, it takes an average of 28 h 2 min to complete. ", location: "Natural park of the Gulf of Morbihan, France", user: user3)
 url5 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654174673/offthecliff/g34-2_xkfrae.jpg')
 gr34.photo.attach(io: url5, filename: '5.jpg', content_type: 'images/jpg')
+
+siete = Trail.create(name: "Seven Peaks", distance: 12, duration: 14_400, elevation: 569, difficulty: "Experienced", description: "Discover this 12.1-km loop trail near Cercedilla, Community of Madrid. Generally considered a challenging route, it takes an average of 4 h 13 min to complete. This is a popular trail for backpacking, hiking, and snowshoeing, but you can still enjoy some solitude during quieter times of day", location: "Parque sierra de grazalema, Spain", user: user4)
+url6 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654183594/offthecliff/siete_zkb1pk.jpg')
+siete.photo.attach(io: url6, filename: '6.jpg', content_type: 'images/jpg')
+
+cochino = Trail.create(name: "La Pedriza - Canto Cochino", distance: 12, duration: 12_600, elevation: 426, difficulty: "Intermediate", description: "Head out on this 12.1-km loop trail near Manzanares El Real, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 3 h 36 min to complete.", location: "Parque Regional de la Cuenca Alta de Manzanares, Spain", user: user4)
+url7 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654183999/offthecliff/cochino_o7mx0p.jpg')
+cochino.photo.attach(io: url7, filename: '7.jpg', content_type: 'images/jpg')
 
 csv_file = File.read(Rails.root.join('db', 'roraima.csv'))
 csv = CSV.parse(csv_file, headers: true, encoding: 'ISO-8859-1')
@@ -95,6 +103,30 @@ csv5.each do |row|
   point.latitude = row[0].to_f
   point.elevation = row[2].to_i
   point.trail = gr34
+  point.save!
+  puts "Point #{point.id} saved!"
+end
+
+csv_file6 = File.read(Rails.root.join('db', 'siete.csv'))
+csv6 = CSV.parse(csv_file6, headers: true, encoding: 'ISO-8859-1')
+csv6.each do |row|
+  point = Point.new
+  point.longitude = row[1].to_f
+  point.latitude = row[0].to_f
+  point.elevation = row[2].to_i
+  point.trail = siete
+  point.save!
+  puts "Point #{point.id} saved!"
+end
+
+csv_file7 = File.read(Rails.root.join('db', 'cochino.csv'))
+csv7 = CSV.parse(csv_file7, headers: true, encoding: 'ISO-8859-1')
+csv7.each do |row|
+  point = Point.new
+  point.longitude = row[1].to_f
+  point.latitude = row[0].to_f
+  point.elevation = row[2].to_i
+  point.trail = cochino
   point.save!
   puts "Point #{point.id} saved!"
 end
