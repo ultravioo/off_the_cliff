@@ -9,7 +9,7 @@ h1 {
 
 .card-container-main {
   max-width: 394px;
-  height: 280px;
+  height: 250px;
   background-image: url("https://res.cloudinary.com/rubberd/image/upload/v1654066639/offthecliff/15.2_ur0zbb.jpg");
   background-size: cover;
   box-shadow: 0px 8px 14px -2px rgba(30,30,30,0.5);
@@ -32,18 +32,19 @@ h1 {
 }
 
 .card-description {
-  margin-bottom: 20px;
   text-align: justify;
+  margin-bottom: 5px;
 }
 
 .card-information {
   display: flex;
 }
 
-i {
+.fontawe-links {
   padding-top: 4px;
   padding-right: 2px;
   color: white;
+  margin: 0;
 }
 
 .card-title {
@@ -51,6 +52,7 @@ i {
   color: white;
   font-weight: 400;
   text-decoration: none;
+  margin: 0;
 }
 
 .link-title-trail-index {
@@ -58,18 +60,16 @@ i {
   color: $white;
 }
 
-p {
+.card-description-text {
   color: white;
   font-family: oswald;
   font-size: 16px;
   font-weight: 200;
+  margin: 0;
 }
 
 .card-information-time {
   display: flex;
   padding-right: 20px;
+  margin: 0;
 }
-
-// ROFL
-
-/* TEST */
