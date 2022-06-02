@@ -61,6 +61,7 @@ export default class extends Controller {
       const customMarker = document.createElement("div")
       customMarker.className = "marker"
 
+
       if (pin.kind == "Roadblock")
       customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159288/offthecliff/pin-4_pffwh1.png"}`
       if (pin.kind == "Picture Spot")
@@ -69,6 +70,8 @@ export default class extends Controller {
       customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159204/offthecliff/pin-2_fo5zgz.png"}`
       if (pin.kind == "Warning")
       customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159184/offthecliff/pin_z5jrn6.png"}`
+    
+
 
       customMarker.style.backgroundSize = "contain"
       customMarker.style.width = "30px"
