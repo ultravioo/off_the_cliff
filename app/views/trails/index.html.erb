@@ -20,21 +20,3 @@
 </div>
 <% end %>
 </div>
-
-<div class="container">
-<% @pins.each do |pin| %>
-<div class="card-container-pin-main">
-  <div class="card-container-pin-inner">
-    <div class="card-title"><h1><%= "pin #" %></h1></div>
-    <div class="card-description"><p class="card-description-text"><%= pin.description %></p></div>
-    <div><p class="card-pin-question"><%= "Was this correct?" %></p></div>
-    <div class="choose-answer">
-    <div class="answer no"> <i class="fa-solid fa-xmark"></i></div>
-  <div class="answer yes" > <i class="fa-solid fa-check"></i> </div>
-
-</div>
-  </div>
-
-</div>
-<% end %>
-</div>
