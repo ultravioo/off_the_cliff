@@ -3,6 +3,7 @@ class TrailsController < ApplicationController
 
   def index
     @trails = Trail.all
+    @pins = Pin.all
   end
 
   def show

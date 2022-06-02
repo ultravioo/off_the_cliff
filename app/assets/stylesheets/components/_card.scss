@@ -21,7 +21,7 @@ h1 {
   background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.77%, rgba(0, 0, 0, 0.4) 45.83%, #000000 100%);
   border-radius: 10px;
   width: inherit;
-  height: inherit;
+  height: inherit;;
   display: flex;
   flex-direction: column;
   margin: 10px auto;
@@ -72,4 +72,60 @@ h1 {
   display: flex;
   padding-right: 20px;
   margin: 0;
+}
+
+.card-pin-question {
+  font-family: oswald;
+  color: white;
+}
+
+.card-container-pin-inner {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.77%, rgba(0, 0, 0, 0.4) 45.83%, #000000 100%);
+  border-radius: 10px;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto;
+  justify-content: center;
+  padding: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  ackground-color: #43816C
+}
+
+.answer {
+  color: white;
+  border-radius: 10px;
+  width: 50%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.no {
+  background-color: #FF8000;
+  align-items: center;
+}
+
+.yes {
+  background-color: #43816C ;
+  align-items: center;
+}
+
+.choose-answer {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+
+.card-container-pin-main {
+  max-width: 394px;
+  height: 180px;
+  background-image: url("https://res.cloudinary.com/rubberd/image/upload/v1654066639/offthecliff/15.2_ur0zbb.jpg");
+  background-size: cover;
+  box-shadow: 0px 8px 14px -2px rgba(30,30,30,0.5);
+  border-radius: 10px;
+  background-position: center;
 }
