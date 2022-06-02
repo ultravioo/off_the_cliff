@@ -58,9 +58,23 @@ export default class extends Controller {
   addPinsToMap() {
     this.pinsValue.forEach((pin) => {
       const popup = new mapboxgl.Popup().setHTML(pin.info_window)
+      const customMarker = document.createElement("div")
+      customMarker.className = "marker"
 
+      if (pin.kind == "Roadblock")
+      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159288/offthecliff/pin-4_pffwh1.png"}`
+      if (pin.kind == "Picture Spot")
+      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159256/offthecliff/pin-3_zzjqsd.png"}`
+      if (pin.kind == "Camping Site")
+      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159204/offthecliff/pin-2_fo5zgz.png"}`
+      if (pin.kind == "Warning")
+      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159184/offthecliff/pin_z5jrn6.png"}`
 
-      new mapboxgl.Marker()
+      customMarker.style.backgroundSize = "contain"
+      customMarker.style.width = "30px"
+      customMarker.style.height = "30px"
+
+      new mapboxgl.Marker(customMarker)
         .setLngLat([pin.lng, pin.lat])
         .setPopup(popup)
         .addTo(this.map)
