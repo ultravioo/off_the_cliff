@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="icon" href="https://res.cloudinary.com/rubberd/image/upload/v1654260162/offthecliff/favicon_gbxx4g.png" type="image/x-icon">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -17,9 +18,7 @@
   </head>
 
   <body>
-    <div class="container-nav">
-      <%= render 'shared/navbar' %>
-    </div>
+    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
     <%= yield %>

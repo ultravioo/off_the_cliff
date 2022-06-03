@@ -1,15 +1,15 @@
 <h1> These are your pins</h1>
 
-<div class="container">
+<div  class="container">
 <% @pins.each do |pin| %>
-<div class="card-container-pin-main">
+<div data-controller="card" class="card-container-pin-main">
   <div class="card-container-pin-inner">
     <div class="card-title"><h1><%= "pin #" %></h1></div>
     <div class="card-description"><p class="card-description-text"><%= pin.description %></p></div>
     <div><p class="card-pin-question"><%= "Was this correct?" %></p></div>
-    <div class="choose-answer">
-    <button class="no"> <div class="answer" >  <i class="fa-solid fa-xmark"></i> </div></button>
-  <button class="yes"> <div class="answer"  > <i class="fa-solid fa-check"></i></div></button>
+    <div class="choose-answer" >
+    <button id="no" data-action="click->card#cardisappear"> <div class="answer" id="answer-no">  <i class="fa-solid fa-xmark"></i> </div></button>
+  <button id="yes" data-action="click->card#cardisappear"> <div class="answer" id="answer-yes" > <i class="fa-solid fa-check"></i></div></button>
 
 </div>
   </div>
