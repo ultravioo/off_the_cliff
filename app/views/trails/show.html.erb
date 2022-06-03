@@ -21,3 +21,7 @@
   data-mapbox-pins-value="<%= @pins.to_json %>"
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 </div>
+
+<%= simple_form_for [ @trail, @hike ] do |f| %>
+  <%= f.submit "Hike This Route", class: "button-show", id:"btn-review-show" %>
+<% end %>

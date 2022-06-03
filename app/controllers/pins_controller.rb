@@ -5,5 +5,4 @@ class PinsController < ApplicationController
     @trail = Trail.find(params[:trail_id])
     @pins = @trail.pins
   end
-
 end
