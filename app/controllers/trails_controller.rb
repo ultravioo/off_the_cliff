@@ -7,6 +7,7 @@ class TrailsController < ApplicationController
   end
 
   def show
+    @hike = Hike.new
     @trail = Trail.find(params[:id])
     @pins = @trail.pins.map do |point|
       {
