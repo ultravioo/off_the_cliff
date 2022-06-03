@@ -1,23 +1,28 @@
 <script src="https://kit.fontawesome.com/6eb7b1a5cb.js" crossorigin="anonymous"></script>
 
-<h1><%= @trail.name %></h1>
+<div class="trail-show-card-container">
+  <div class="info" id="trail-name"> <h1><%= @trail.name %></h1> </div>
 
-<h2><%= @trail.location %></h2>
+  <div class="info" id="trail-location"> <h2><%= @trail.location %></h2> </div>
 
-<div>
-<p><strong>Distance:</strong> <%= @trail.distance %> km</p>
-<p><strong>Duration:</strong> <%= @trail.duration %> seconds</p>
-<p><strong>Elevation:</strong> <%= @trail.elevation %> meters</p>
-<p><strong>Difficulty:</strong> <%= @trail.difficulty %></p>
-<p><strong>Description:</strong> <%= @trail.description %></p>
+  <div class="info">
+    <p><strong>Distance:</strong> <%= @trail.distance %> km</p>
+    <p><strong>Duration:</strong> <%= @trail.duration %> seconds</p>
+    <p><strong>Elevation:</strong> <%= @trail.elevation %> meters</p>
+    <p><strong>Difficulty:</strong> <%= @trail.difficulty %></p>
+    <p><strong>Description:</strong> <%= @trail.description %></p>
+  </div>
 
-<%= link_to "trails", trails_path %>
-
-<i class="fa-solid fa-location-dot"></i>
-
+<div class="container-button-show">
+  <button id="go-back-button">
+    <%= link_to "go back to all trails", trails_path %>
+  </button>
+</div>
 <div style="width: 100%; height: 600px;"
   data-controller="mapbox"
   data-mapbox-points-value="<%= @points.to_json %>"
   data-mapbox-pins-value="<%= @pins.to_json %>"
-  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
+
 </div>
