@@ -6,4 +6,7 @@ class PinsController < ApplicationController
     @pins = @trail.pins
   end
 
+  def confirm
+    
+  end
 end
