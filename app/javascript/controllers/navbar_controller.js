@@ -7,11 +7,9 @@ export default class extends Controller {
     console.log(this.buttonTarget);
   }
 
-  backgroundNav(event) {
-    if (this.buttonTarget.checked === true) {
-      this.element.classList.add("bg-white");
-    } else {
-      this.element.classList.remove("bg-white");
-    }
+  menuOnClick(event) {
+    document.getElementById("menu-bar").classList.toggle("change");
+    document.getElementById("nav").classList.toggle("change");
+    document.getElementById("menu-bg").classList.toggle("change-bg");
   }
 }
