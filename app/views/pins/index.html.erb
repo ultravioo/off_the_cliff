@@ -1,19 +1,27 @@
 <h1> These are your pins</h1>
 
-<div  class="container">
+<div class="container">
 <% @pins.each do |pin| %>
-<div data-controller="card" class="card-container-pin-main">
-  <div class="card-container-pin-inner">
+  <div data-controller="card" class="card-container-pin-main">
+    <div class="card-container-pin-inner">
     <div class="card-title"><h1><%= "pin #" %></h1></div>
-    <div class="card-description"><p class="card-description-text"><%= pin.description %></p></div>
-    <div><p class="card-pin-question"><%= "Was this correct?" %></p></div>
-    <div class="choose-answer" >
-    <button id="no" data-action="click->card#cardisappear"> <div class="answer" id="answer-no">  <i class="fa-solid fa-xmark"></i> </div></button>
-  <button id="yes" data-action="click->card#cardisappear"> <div class="answer" id="answer-yes" > <i class="fa-solid fa-check"></i></div></button>
-
-</div>
-  </div>
-
-</div>
+      <div class="card-description"><p class="card-description-text"><%= pin.description %></p></div>
+      <div><p class="card-pin-question"><%= "Was this correct?" %></p></div>
+        <div class="choose-answer" >
+          <button id="no" data-action="click->card#cardisappear"> <div class="answer" id="answer-no">  <i class="fa-solid fa-xmark"></i> </div></button>
+          <button id="yes" data-action="click->card#cardisappear"> <div class="answer" id="answer-yes" > <i class="fa-solid fa-check"></i></div></button>
+        </div>
+      </div>
+    </div>
 <% end %>
+</div>
+
+<div class="needs-validation d-flex justify-content-center">
+  <%= simple_form_for [ @trail, @review ], html: {style: "width:500px;"} do |f| %>
+    <div class="form-floating mb-3 d-grid gap-2">
+      <%= f.input :content, class: "form-control", placeholder: "content" %>
+      <%= f.input :rating, collection: (1..5).to_a, label: "Rating" %>
+      <%= f.submit "Submit Review", class: "btn btn-primary" %>
+    </div>
+  <% end %>
 </div>
