@@ -1,0 +1,16 @@
+
+.container-title-list{
+  background-color: $dark-green;
+  height: 90px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items : center;
+}
+
+.title-list{
+  font-family: $text-font-koulen;
+  color: $white;
+  font-size: 35px;
+}
