@@ -1,17 +1,17 @@
 <script src="https://kit.fontawesome.com/6eb7b1a5cb.js" crossorigin="anonymous"></script>
+  <div class="container-title-header">
+    <div  id="trail-name"> <h1 class="title-header"><%= @trail.name %></h1> </div>
+  </div>
 <div class="trail-show-card-container">
-  <div class="info" id="trail-name"> <h1><%= @trail.name %></h1> </div>
-
-  <div class="info" id="trail-location"> <h2><%= @trail.location %></h2> </div>
-
   <div class="info">
+    <h2 class="location-info"><%= @trail.location %></h2>
     <p><strong>Distance:</strong> <%= @trail.distance %> km</p>
-    <p><strong>Duration:</strong> <%= @trail.duration %> seconds</p>
+    <p><strong>Duration:</strong> <%= (@trail.duration / 60) %> minutes</p>
     <p><strong>Elevation:</strong> <%= @trail.elevation %> meters</p>
     <p><strong>Difficulty:</strong> <%= @trail.difficulty %></p>
     <p><strong>Description:</strong> <%= @trail.description %></p>
   </div>
-
+</div>
 <div class="container-button-show">
   <button class="go-back-button">
     <%= link_to "go back to all trails", trails_path %>
@@ -29,5 +29,4 @@
   data-mapbox-points-value="<%= @points.to_json %>"
   data-mapbox-pins-value="<%= @pins.to_json %>"
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
-</div>
 </div>
