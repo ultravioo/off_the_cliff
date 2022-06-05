@@ -2,8 +2,13 @@ class TrailsController < ApplicationController
   skip_before_action :authenticate_user!
 
   def index
-    @trails = Trail.all
     @pins = Pin.all
+    if params[:query].present?
+      sql_query = "name ILIKE :query OR location ILIKE :query"
+      @trails = Trail.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @trails = Trail.all
+    end
   end
 
   def show
