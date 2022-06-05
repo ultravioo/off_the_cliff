@@ -1,5 +1,5 @@
 
-.container-title-list{
+.container-title-header{
   background-color: $dark-green;
   height: 90px;
   border-bottom-left-radius: 20px;
@@ -7,9 +7,12 @@
   display: flex;
   justify-content: center;
   align-items : center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
-.title-list{
+.title-header{
   font-family: $text-font-koulen;
   color: $white;
   font-size: 35px;
