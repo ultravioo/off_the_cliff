@@ -10,9 +10,12 @@ require 'csv'
 require 'open-uri'
 
 User.destroy_all
+Hike.destroy_all
 Trail.destroy_all
 Point.destroy_all
 Pin.destroy_all
+Favorite.destroy_all
+Review.destroy_all
 
 user = User.create(email: "fernandogomezv@gmail.com", first_name: "Fernando", last_name: "Gomez", username: "fernandogomezv", password: "123456" )
 user2 = User.create(email: "juandirection@gmail.com", first_name: "Juan", last_name: "Direction", username: "juandirection", password: "123456" )
@@ -46,6 +49,18 @@ siete.photo.attach(io: url6, filename: '6.jpg', content_type: 'images/jpg')
 cochino = Trail.create(name: "La Pedriza - Canto Cochino", distance: 12, duration: 12_600, elevation: 426, difficulty: "Intermediate", description: "Head out on this 12.1-km loop trail near Manzanares El Real, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 3 h 36 min to complete.", location: "Parque Regional de la Cuenca Alta de Manzanares, Spain", user: user4)
 url7 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654183999/offthecliff/cochino_o7mx0p.jpg')
 cochino.photo.attach(io: url7, filename: '7.jpg', content_type: 'images/jpg')
+
+glorieta = Trail.create(name: "Mirador Peñarrubia", distance: 4, duration: 3_600, elevation: 101, difficulty: "Beginner", description: "Check out this 4.0-km loop trail near Madrid, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 1 h 4 min to complete.", location: "Glorieta de los pinos, Spain", user: user4)
+url8 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654498991/offthecliff/glorieta_eem68k.jpg')
+glorieta.photo.attach(io: url8, filename: '8.jpg', content_type: 'images/jpg')
+
+rascafria = Trail.create(name: "Rascafría Trail", distance: 8, duration: 9_000, elevation: 344, difficulty: "Intermediate", description: "Get to know this 7.6-km loop trail near Rascafría, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 2 h 32 min to complete.", location: "Madrid, Spain", user: user4)
+url9 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654499465/offthecliff/rascafria_lz3hf9.jpg')
+rascafria.photo.attach(io: url9, filename: '9.jpg', content_type: 'images/jpg')
+
+hecce = Trail.create(name: "Hecce Homo", distance: 13, duration: 12_600, elevation: 329, difficulty: "Intermediate", description: "Enjoy this 13.0-km loop trail near Alcalá de Henares, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 3 h 26 min to complete.", location: "Parque natural de los cerros, Spain", user: user4)
+url10 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654499831/offthecliff/hecce_ekgldb.jpg')
+hecce.photo.attach(io: url10, filename: '10.jpg', content_type: 'images/jpg')
 
 csv_file = File.read(Rails.root.join('db', 'roraima.csv'))
 csv = CSV.parse(csv_file, headers: true, encoding: 'ISO-8859-1')
