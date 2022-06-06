@@ -1,0 +1,81 @@
+.profile-container {
+  max-width: 350px;
+  border-radius: 10px;
+  height: 180px;
+  margin: 90px auto 30px;
+}
+
+.profile-container-main-picture {
+  border-radius: 20px;
+  width: inherit;
+  height: inherit;
+  background-size: cover;
+  position: relative;
+}
+
+.card-profile-name {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.carousel {
+max-width: 350px;
+background-color: #4a695d;
+margin: auto;
+height: 350px;
+border-radius: 10px;
+}
+
+.level-container {
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.level-icons {
+  padding: 10px;
+}
+
+.level-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1 {
+    margin: 0px;
+    color: #4a695d;
+  }
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item.active {
+  height: 100%;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: white;
+  }
+}
+.carousel-item{
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h1 {
+    color: white;
+  }
+}
+
+.carousel-control-prev {
+  height: 100%;
+}
+
+.carousel-control-next {
+  height: 100%;
+}

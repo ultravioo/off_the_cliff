@@ -21,6 +21,9 @@ user = User.create(email: "fernandogomezv@gmail.com", first_name: "Fernando", la
 user2 = User.create(email: "juandirection@gmail.com", first_name: "Juan", last_name: "Direction", username: "juandirection", password: "123456" )
 user3 = User.create(email: "ultravio@gmail.com", first_name: "Violette", last_name: "Ultra", username: "ultravio", password: "123456" )
 user4 = User.create(email: "gonzalito@gonzalito.gon", first_name: "Gonzalito", last_name: "Guerra", username: "gggonzalito", password: "123456" )
+user5 = User.create(email: "dean@goated.com", first_name: "Dean", last_name: "Potter", username: "deanmagician", password: "123456")
+url100 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654501549/offthecliff/deanpotter_bcyipq.webp')
+user5.photo.attach(io: url100, filename: '11.jpg', content_type: 'images/jpg')
 
 roraima = Trail.create(name: "Mount Roraima", distance: 69, duration: 93_600, elevation: 3881, difficulty: "Pro", description: "Discover this 68.4-km loop trail near Gran Sabana, Bolívar. Generally considered a challenging route, it takes an average of 25 h 37 min to complete. This is a popular trail for backpacking and hiking, but you can still enjoy some solitude during quieter times of day.", location: "La Gran Sabana, Venezuela", user: user)
 url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654167141/offthecliff/roraima_mrixmf.jpg')
