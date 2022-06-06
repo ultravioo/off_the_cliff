@@ -12,15 +12,13 @@
     <p><strong>Description:</strong> <%= @trail.description %></p>
   </div>
 </div>
-<div class="container-button-show">
-  <button class="go-back-button">
-    <%= link_to "go back to all trails", trails_path %>
-  </button>
+<div class="container-button-show d-flex mb-3 p-0 justify-content-around">
+  <%= link_to "Back to trails", trails_path, class:"btn btn-outline-primary" %>
   <%= simple_form_for [ @trail, @favorite ] do |f| %>
-    <%= f.submit "Favorite This Route", class: "go-back-button" %>
+    <%= f.submit "Favorite", class: "btn btn-outline-primary ms-3" %>
   <% end %>
   <%= simple_form_for [ @trail, @hike ] do |f| %>
-    <%= f.submit "Hike This Route", class: "button-show", id:"btn-review-show" %>
+    <%= f.submit "Hike", class: "btn btn-outline-primary ms-3" %>
   <% end %>
 </div>
 
