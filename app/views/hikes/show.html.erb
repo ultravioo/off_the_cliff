@@ -1,8 +1,10 @@
 <h1>Hike Show Page is Here</h1>
 
-<h2>this is another title</h2>
-
-<h3>this is a massive title</h3>
+<div style="width: 100%; height: 600px;"
+  data-controller="mapbox"
+  data-mapbox-points-value="<%= @points.to_json %>"
+  data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 
 <%= simple_form_for [ @hike ] do |f| %>
   <% if @hike.started_at == nil %>
