@@ -24,5 +24,12 @@ class HikesController < ApplicationController
 
   def show
     @hike = Hike.find(params[:id])
+    @trail = @hike.trail
+    @points = @trail.points.map do |point|
+      [
+        point.longitude,
+        point.latitude
+      ]
+    end
   end
 end

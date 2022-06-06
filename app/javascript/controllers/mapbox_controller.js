@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import { auto } from "@popperjs/core"
 import mapboxgl from "mapbox-gl"
 
 export default class extends Controller {
@@ -15,7 +16,8 @@ export default class extends Controller {
       container: this.element,
       style: "mapbox://styles/violettedunoyer/cl3ub87tf002k15qg9rsnfo6h",
       center: this.pointsValue[0],
-      zoom: 16
+      zoom: 16,
+
     })
 
     this.map.on('load', () => {
@@ -44,6 +46,18 @@ export default class extends Controller {
           'line-width': 8
         }
       });
+
+      this.map.addControl(new mapboxgl.GeolocateControl({
+        positionOptions: {
+          enableHighAccuracy: true
+        },
+        trackUserLocation: true,
+        showUserHeading: true
+      }));
+      const nav = new mapboxgl.NavigationControl({
+        visualizePitch: true
+      });
+      this.map.addControl(nav, 'bottom-right');
     });
 
     this.addPinsToMap()
@@ -63,14 +77,14 @@ export default class extends Controller {
 
 
       if (pin.kind == "Roadblock")
-      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159288/offthecliff/pin-4_pffwh1.png"}`
+      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.12.21-modified_qngs1r.png"}`
       if (pin.kind == "Picture Spot")
-      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159256/offthecliff/pin-3_zzjqsd.png"}`
+      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.13.15-modified_r7wcuz.png"}`
       if (pin.kind == "Camping Site")
-      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159204/offthecliff/pin-2_fo5zgz.png"}`
+      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.11.09-modified_e6uwbv.png"}`
       if (pin.kind == "Warning")
-      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654159184/offthecliff/pin_z5jrn6.png"}`
-    
+      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.12.21-modified_qngs1r.png"}`
+
 
 
       customMarker.style.backgroundSize = "contain"
