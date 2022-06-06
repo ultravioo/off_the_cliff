@@ -5,7 +5,11 @@ class ReviewsController < ApplicationController
     @user = current_user
     @review.user = @user
     @review.trail = @trail
-    @review.save!
+    if @review.save!
+      redirect_to profile_path
+    else
+      render :new
+    end
   end
 
   private
