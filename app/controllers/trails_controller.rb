@@ -3,12 +3,9 @@ class TrailsController < ApplicationController
 
   def index
     @pins = Pin.all
-    if params[:query].present?
-      sql_query = "name ILIKE :query OR location ILIKE :query"
-      @trails = Trail.where(sql_query, query: "%#{params[:query]}%")
-    else
-      @trails = Trail.all
-    end
+    @trails = Trail.all
+    @trails = @trails.where(difficulty: params[:difficulty]) if params[:difficulty].present?
+    @trails = @trails.where("name ILIKE :query OR location ILIKE :query", query: "%#{params[:query]}%") if params[:query].present?
   end
 
   def show
