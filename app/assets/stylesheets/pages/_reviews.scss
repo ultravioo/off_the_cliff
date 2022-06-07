@@ -9,3 +9,10 @@
 .btn-review {
 	border-radius: 25px;
 }
+
+.container-rating {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  text-align: center;
+}

@@ -23,7 +23,9 @@
     <%= simple_form_for [ @trail, @review ], html: {style: "width:500px;"} do |f| %>
       <div class="form-floating mb-3 d-grid gap-2 m-3">
         <%= f.input :content, class: "form-control", placeholder: "Submit your review", label: "Review" %>
+        <div class="container-rating">
         <%= f.input :rating, collection: (1..5).to_a, label: "Rating"%>
+        </div>
         <%= f.submit "Submit Review", class: "btn btn-primary btn-review" %>
       </div>
     <% end %>
