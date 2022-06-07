@@ -1,3 +1,4 @@
+<div class="whole-hike-container">
 <div class="container-title-header">
     <div  id="trail-name"> <h1 class="title-header"><%= @trail.name %></h1> </div>
   </div>
@@ -5,10 +6,12 @@
 <div style="width: 100%; height: 600px;"
   data-controller="mapbox"
   data-mapbox-points-value="<%= @points.to_json %>"
+  data-mapbox-pins-value="<%= @pins.to_json %>"
   data-mapbox-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
 </div>
 
-<%= simple_form_for [ @hike ] do |f| %>
+<div class="down-button">
+  <%= simple_form_for [ @hike ] do |f| %>
   <% if @hike.started_at == nil %>
     <%= f.submit "Start Route", class: "button-show", id:"btn-review-show" %>
   <% elsif @hike.ended_at == nil %>
@@ -17,3 +20,6 @@
     Ended
   <% end %>
 <% end %>
+</div>
+
+</div>
