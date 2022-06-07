@@ -5,6 +5,7 @@ class Trail < ApplicationRecord
   has_many :pins, dependent: :destroy
   has_many :points, dependent: :destroy
   has_many :reviews, dependent: :destroy
+  has_many :hikes, dependent: :destroy
   has_one_attached :photo
 
   validates :name, presence: true, uniqueness: true
