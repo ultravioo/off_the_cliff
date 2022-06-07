@@ -25,3 +25,18 @@
 .btn {
   height: fit-content;
 }
+
+.checkbox {
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+
+.filter-trails:checked + label {
+  background-color: $light-green;
+  color: white;
+}
+
+.filter-trails {
+  opacity: 0;
+}
