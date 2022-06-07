@@ -3,6 +3,8 @@
 </div>
 
 <div class="container">
+
+<div class="row-of-buttons">
 <%= form_tag trails_path, method: :get do%>
   <div class="d-flex mt-2 p-1 justify-content-between">
     <%= check_box_tag(:difficulty, "Beginner", params[:difficulty] == "Beginner" ? true : false, id: 'difficulty-beginner', class: 'filter-trails') %>
@@ -23,6 +25,9 @@
   <%= submit_tag "Search", class: "btn btn-primary ms-2 form-control" %>
   </div>
 <% end %>
+</div>
+
+<div class="all-the-card-trail">
 <% @trails.each do |trail| %>
 <div class="card-container-main" style="background-image: url('<%= trail.photo.url %>')">
   <div class="card-container-inner">
@@ -41,4 +46,6 @@
   </div>
 </div>
 <% end %>
+</div>
+
 </div>
