@@ -32,7 +32,7 @@ class HikesController < ApplicationController
       ]
     end
     @pins = @trail.pins.map do |point|
-      {
+    {
         lat: point.latitude,
         lng: point.longitude,
         kind: point.kind,

@@ -4,8 +4,7 @@
 
 <div class="container">
   <% @pins.each do |pin| %>
-    <div data-controller="card" class="card-container-pin-main">
-    <% if @pin.kind == "Roadblock" %>
+    <div data-controller="card" class="card-container-pin-main" style="background-image: url('<%= pin.photo.url %>')">
       <div class="card-container-pin-inner">
       <div class="card-title"><h1><%= "pin #" %></h1></div>
         <div class="card-description"><p class="card-description-text"><%= pin.description %></p></div>
@@ -32,6 +31,3 @@
     <% end %>
   </div>
 </div>
-
-
-"Roadblock", "Warning", "Camping Site", "Picture Spot"
