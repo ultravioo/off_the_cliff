@@ -210,6 +210,17 @@ csv7.each do |row|
 end
 
 pin1 = Pin.create!(latitude: 36.70474000, longitude: -5.42274000, trail: salto, description: "dangerous dangerous dangerous dangerous !!!!!!!", kind: "Warning")
+url200= URI.open('')
+pin1.photo.attach(io: url200, filename: '200.jpg', content_type: 'images/jpg')
+
 pin2 = Pin.create!(latitude: 36.71063000, longitude: -5.42455000, trail: salto, description: "tree has fallen down", kind: "Roadblock")
+url201= URI.open('')
+pin2.photo.attach(io: url201, filename: '201.jpg', content_type: 'images/jpg')
+
 pin3 = Pin.create!(latitude: 36.74420000, longitude: -5.40692000, trail: salto, description: "Great to sleep the first day", kind: "Camping Site")
+url202= URI.open('')
+pin3.photo.attach(io: url202, filename: '202.jpg', content_type: 'images/jpg')
+
 pin4 = Pin.create!(latitude: 36.75417000, longitude: -5.39606000, trail: salto, description: "The view here is super cool if you on the right side of the trail", kind: "Picture Spot")
+url203= URI.open('')
+pin4.photo.attach(io: url203, filename: '203.jpg', content_type: 'images/jpg')
