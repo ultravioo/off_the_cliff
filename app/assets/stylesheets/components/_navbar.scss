@@ -1,121 +1,123 @@
 #menu {
-  z-index: 2;
-  overflow: hidden;
+	z-index: 2;
+	overflow: hidden;
+	// background-color: red;
+	position: fixed;
+	width: 100%;
+	top: 0;
 }
 
 #menu-bar {
-  width: 45px;
-  height: 40px;
-  margin: 30px 0 20px 20px;
-  cursor: pointer;
+	width: 45px;
+	height: 40px;
+	margin: 30px 0 20px 20px;
+	cursor: pointer;
 }
 
 .bar {
-  height: 5px;
-  width: 100%;
-  background-color: #113630;
-  display: block;
-  border-radius: 5px;
-  transition: 0.3s ease;
+	height: 5px;
+	width: 100%;
+	background-color: #113630;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
 }
 
 #bar1 {
-  transform: translateY(-4px);
-  outline: 2px solid white;
+	transform: translateY(-4px);
+	outline: 2px solid white;
 }
 #bar2 {
-  outline: 2px solid white;
+	outline: 2px solid white;
 }
 
 #bar3 {
-  transform: translateY(4px);
-  outline: 2px solid white;
+	transform: translateY(4px);
+	outline: 2px solid white;
 }
 
 .nav {
-  transition: 0.2s ease;
-  // background-color: red;
-  height: 89.5%;
-  display: none;
+	transition: 0.2s ease;
+	// background-color: red;
+	height: 89.5%;
+	display: none;
 }
 
 .nav ul {
-  padding: 0 22px;
+	padding: 0 22px;
 }
 
 .nav li {
-  list-style: none;
-  padding: 12px 0;
+	list-style: none;
+	padding: 12px 0;
 }
 
 .nav li a {
-  color: white;
-  font-size: 30px;
-  text-decoration: none;
+	color: white;
+	font-size: 30px;
+	text-decoration: none;
 }
 
 .nav li a:hover {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .ul-nav {
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.menu-bg,
-#menu {
-  top: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
+	height: 80%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .menu-bg {
-  z-index: 1;
-  width: 0;
-  height: 0;
-  margin: 30px 0 20px 20px;
-  background: radial-gradient(circle, #113630, #113630);
-  transition: 0.3s ease;
+	top: 0;
+	left: 0;
+	position: absolute;
+	width: 100%;
+}
+
+.menu-bg {
+	z-index: 1;
+	width: 0;
+	height: 0;
+	margin: 30px 0 20px 20px;
+	background: radial-gradient(circle, #113630, #113630);
+	transition: 0.3s ease;
+	position: fixed;
 }
 
 .change {
-  display: block;
-  height: 86vh;
-  // width: 100vw;
-  // height: 100vh;
+	display: block;
+	height: 86vh;
 }
 
-// This is the 3 lines of the button-----------------------
+// This is the 3 of the button-----------------------
 .change .bar {
-  background-color: $dark-green;
-  border: 2px solid $white;
+	background-color: $dark-green;
+	outline: 2px solid $white;
 }
 
 .change #bar1 {
-  background-color: $dark-green;
-  border: 2px solid $white;
-  transform: translateY(4px) rotateZ(-45deg);
+	background-color: $dark-green;
+	outline: 2px solid $white;
+	transform: translateY(4px) rotateZ(-45deg);
 }
 
 .change #bar2 {
-  opacity: 0;
+	opacity: 0;
 }
 
 .change #bar3 {
-  background-color: $dark-green;
-  border: 2px solid $white;
-  transform: translateY(-6px) rotateZ(45deg);
+	background-color: $dark-green;
+	outline: 2px solid $white;
+	transform: translateY(-6px) rotateZ(45deg);
 }
 // END 3 lines---------------------------------------------
 
 .change-bg {
-  width: 239vw;
-  height: 140%;
-  background-color: $dark-green;
-  transform: translate(-60%, -30%);
+	width: 239vw;
+	height: 140%;
+	background-color: $dark-green;
+	transform: translate(-60%, -30%);
 }
