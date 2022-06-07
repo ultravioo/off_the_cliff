@@ -31,10 +31,30 @@
 <div class="trail-show-card-container">
   <div class="info">
     <h2 class="location-info"><%= @trail.location %></h2>
-    <p><strong>Distance:</strong> <%= @trail.distance %> km</p>
-    <p><strong>Duration:</strong> <%= (@trail.duration / 60) %> minutes</p>
-    <p><strong>Elevation:</strong> <%= @trail.elevation %> meters</p>
-    <p><strong>Difficulty:</strong> <%= @trail.difficulty %></p>
-    <p><strong>Description:</strong> <%= @trail.description %></p>
   </div>
+  <div class="grid-up-and-down">
+    <div class="grid-up" >
+      <div class="grid-square">
+        <p><strong></strong> <%= @trail.distance %> km</p>
+      </div>
+      <div class="grid-square">
+        <p><strong></strong> <%= (@trail.duration / 60) %> minutes</p>
+      </div>
+    </div>
+    <div class="grid-down" >
+    <div class="grid-square">
+      <p><strong></strong> <%= @trail.elevation %> meters</p>
+    </div>
+    <div class="grid-square">
+      <p><strong></strong> <%= @trail.difficulty %></p>
+    </div>
+  </div>
+    </div>
+    <div class="description-bottom">
+      <p><strong></strong> <%= @trail.description %></p>
+    </div>
+
+
+
+
 </div>
