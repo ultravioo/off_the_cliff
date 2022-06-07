@@ -4,7 +4,7 @@
 
 <div class="container">
 <%= form_tag trails_path, method: :get do%>
-  <div class="d-flex m-0 justify-content-between">
+  <div class="d-flex mt-2 p-1 justify-content-between">
     <%= check_box_tag(:difficulty, "Beginner", params[:difficulty] == "Beginner" ? true : false, id: 'difficulty-beginner', class: 'filter-trails') %>
     <label for="difficulty-beginner" class="btn btn-outline-primary form-control p-1">Beginner</label>
     <%= check_box_tag(:difficulty, "Intermediate", params[:difficulty] == "Intermediate" ? true : false, id: 'difficulty-inter', class: 'filter-trails') %>
@@ -14,7 +14,7 @@
     <%= check_box_tag(:difficulty, "Pro", params[:difficulty] == "Pro" ? true : false, id: 'difficulty-pro', class: 'filter-trails') %>
     <label for="difficulty-pro" class="btn btn-outline-primary form-control p-1">Pro</label>
   </div>
-<div class="d-flex p-1 justify-content-between">
+<div class="d-flex mt-2 p-1 justify-content-between">
   <%= text_field_tag :query,
     params[:query],
     class: "form-control",
