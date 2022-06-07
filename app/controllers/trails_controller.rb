@@ -27,5 +27,7 @@ class TrailsController < ApplicationController
         point.latitude
       ]
     end
+    @counter = @trail.points.count
+    @middle = @counter.div(2)
   end
 end

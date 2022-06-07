@@ -134,4 +134,20 @@ button {
   background-color: #113630;
   padding: 7px;
   color: white;
+
+}
+
+.down-button {
+  display: flex;
+  justify-content: center;
+}
+
+#btn-review-show {
+  width: 400px;
+}
+
+.whole-hike-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

@@ -31,5 +31,14 @@ class HikesController < ApplicationController
         point.latitude
       ]
     end
+    @pins = @trail.pins.map do |point|
+      {
+        lat: point.latitude,
+        lng: point.longitude,
+        kind: point.kind,
+        description: point.description,
+        info_window: render_to_string(partial: "info_window", locals: { pin: point })
+      }
   end
+end
 end

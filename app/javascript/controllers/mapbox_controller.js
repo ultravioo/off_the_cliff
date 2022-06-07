@@ -6,7 +6,7 @@ export default class extends Controller {
   static values = {
     apiKey: String,
     points: Array,
-    pins: Array
+    pins: Array,
   }
 
   connect() {
@@ -16,8 +16,10 @@ export default class extends Controller {
       container: this.element,
       // style: "mapbox://styles/violettedunoyer/cl3ub87tf002k15qg9rsnfo6h",
       style: "mapbox://styles/violettedunoyer/cl432b1pu004014n03j2pqtch",
-      center: this.pointsValue[0],
-      zoom: 11,
+      // center: this.pointsValue[0],
+      // center: this.pointsValue[(this.points.Length + 1)/2],
+      center: this.findMiddle(),
+      zoom: 12,
 
     })
 
@@ -78,13 +80,13 @@ export default class extends Controller {
 
 
       if (pin.kind == "Roadblock")
-      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.12.21-modified_qngs1r.png"}`
+        customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.12.21-modified_qngs1r.png"}`
       if (pin.kind == "Picture Spot")
-      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.13.15-modified_r7wcuz.png"}`
+        customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.13.15-modified_r7wcuz.png"}`
       if (pin.kind == "Camping Site")
-      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.11.09-modified_e6uwbv.png"}`
+        customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.11.09-modified_e6uwbv.png"}`
       if (pin.kind == "Warning")
-      customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.12.21-modified_qngs1r.png"}`
+        customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.12.21-modified_qngs1r.png"}`
 
 
 
@@ -97,5 +99,10 @@ export default class extends Controller {
         .setPopup(popup)
         .addTo(this.map)
     });
+  }
+
+  findMiddle() {
+    const index = (this.pointsValue.length + 1) / 2;
+    return this.pointsValue[index]
   }
 }
