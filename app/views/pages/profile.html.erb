@@ -22,22 +22,30 @@
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-    <div>
-      <h1>In 2022 you have walked</h1>
-      <h1>4200 Km</h1>
-    </div>
-    </div>
-    <div class="carousel-item">
-    <div>
-      <h1>Elevated a total of</h1>
-      <h1>4390 M</h1>
-    </div>
+      <div>
+        <h1>In 2022 you have walked</h1>
+        <h1><%= @user.ended_distances %> Km</h1>
+      </div>
     </div>
     <div class="carousel-item">
-    <div>
-      <h1>And confirmed</h1>
-      <h1>3942 pins</h1>
+      <div>
+        <h1>Elevated a total of</h1>
+        <h1><%= @user.ended_altitudes %> M</h1>
+      </div>
     </div>
+    <div class="carousel-item">
+      <div>
+        <h1>And confirmed</h1>
+        <h1><%= @user.confirmed_pins %> pins</h1>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div>
+        <h1>Your Favorites Routes</h1>
+        <% @user.favorites.each do |favorite| %>
+        <h1><%= favorite.trail.name %></h1>
+        <% end %>
+      </div>
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
