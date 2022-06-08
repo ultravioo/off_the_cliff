@@ -1,5 +1,5 @@
 #menu {
-	z-index: 2;
+	z-index: 3;
 	overflow: hidden;
 	// background-color: red;
 	position: fixed;
@@ -8,10 +8,21 @@
 }
 
 #menu-bar {
-	width: 45px;
-	height: 40px;
-	margin: 30px 0 20px 20px;
+	width: 35px;
+	height: 30px;
+	margin: 15px 0 20px 10px;
 	cursor: pointer;
+}
+
+.background-circle {
+	z-index: 2;
+	position: fixed;
+	background-color: $white;
+	height: 133px;
+	width: 133px;
+	border-radius: 50%;
+	top: -66.5px;
+	left: -66.5px;
 }
 
 .bar {

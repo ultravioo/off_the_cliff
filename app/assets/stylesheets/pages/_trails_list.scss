@@ -4,18 +4,14 @@
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	display: flex;
-	// justify-content: center;
+	justify-content: center;
 	align-items: center;
-	position: sticky;
-	top: 0;
-	z-index: 1;
-	padding-right: 15px;
-	padding-left: 80px;
-	padding-top: 15px;
-	padding-bottom: 15px;
 }
 
 .title-header {
+  text-align: center;
+	inline-size: 280px;
+	overflow-wrap: break-word;
 	font-family: $text-font-koulen;
 	color: $white;
 	font-size: 35px;
