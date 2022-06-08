@@ -219,7 +219,7 @@ button {
 	box-shadow: 10px;
 	padding: 10px;
 	margin: 10px;
-	box-shadow: 4px 4px 4px 4px #888888;
+	box-shadow: 2px 2px #888888;
 }
 
 .container-search-btn {
@@ -248,13 +248,13 @@ button {
 .trail-reviews-bottom {
   background-color: hwb(0 99% 0%);
   border-radius: 10px;
-  box-shadow: 2px;
   padding: 10px;
   box-shadow: 2px 2px 2px 2px #888888;
   margin-left: 10px;
   margin-right: 10px;
   display: flex;
   flex-direction: column;
+  height: 210px;
 }
 
 .review-individual {
