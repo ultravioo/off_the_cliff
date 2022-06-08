@@ -185,14 +185,15 @@ button {
 }
 
 .grid-square {
-	background-color: hwb(0 99% 0%);
-	width: 120px;
-	height: 120px;
-	border-radius: 10px;
-	box-shadow: 10px;
-	padding: 10px;
-	margin: 5px;
-	box-shadow: 4px 4px #888888;
+  background-color: hwb(0 99% 0%);
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 10px;
+  padding: 10px;
+  margin: 5px;
+  margin-top: 10px;
+  box-shadow: 2px 2px #888888;
 }
 
 .grid-square p {
