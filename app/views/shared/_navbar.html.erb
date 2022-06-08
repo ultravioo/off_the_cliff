@@ -1,18 +1,23 @@
 <div class="background-circle"></div>
 <div id="menu" data-controller="navbar" class="menu-nav">
-    <div id="menu-bar" data-action="click->navbar#menuOnClick">
-        <div id="bar1" class="bar"></div>
-        <div id="bar2" class="bar"></div>
-        <div id="bar3" class="bar"></div>
-    </div>
-    <nav class="nav" id="nav">
-        <ul class="ul-nav">
+  <div id="menu-bar" data-action="click->navbar#menuOnClick">
+      <div id="bar1" class="bar"></div>
+      <div id="bar2" class="bar"></div>
+      <div id="bar3" class="bar"></div>
+  </div>
+  <nav class="nav" id="nav">
+      <ul class="ul-nav">
         <li><%= link_to "Home", "/" %></li>
-        <li><%= link_to "Profile", profile_path %></li>
         <li><%= link_to "Trails", trails_path %></li>
-        <li><%= link_to "Logout", "/" %></li>
-        </ul>
-    </nav>
+        <% if user_signed_in? == false %>
+        <li><%= link_to "Sign in", new_user_session_path %></li>
+        <% end %>
+        <% if user_signed_in? %>
+        <li><%= link_to "Profile", profile_path %></li>
+        <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+        <% end %>
+      </ul>
+  </nav>
 </div>
 
 <div class="menu-bg" id="menu-bg"></div>
