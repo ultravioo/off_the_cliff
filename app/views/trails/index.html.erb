@@ -2,48 +2,32 @@
   <h1 class="title-header">DISCOVER TRAILS</h1>
 </div>
 
-<div class="container">
-  <div class="container-of-buttons">
-    <%= form_tag trails_path, method: :get do%>
-      <div class="container-search-btn">
-        <%= check_box_tag(:difficulty, "Beginner", params[:difficulty] == "Beginner" ? true : false, id: 'difficulty-beginner', class: 'filter-trails') %>
-        <label for="difficulty-beginner" class="btn btn-outline-primary form-control p-1">Beginner</label>
-        <%= check_box_tag(:difficulty, "Intermediate", params[:difficulty] == "Intermediate" ? true : false, id: 'difficulty-inter', class: 'filter-trails') %>
-        <label for="difficulty-inter" class="btn btn-outline-primary form-control p-1">Intermediate</label>
-        <%= check_box_tag(:difficulty, "Experienced", params[:difficulty] == "Experienced" ? true : false, id: 'difficulty-exper', class: 'filter-trails') %>
-        <label for="difficulty-exper" class="btn btn-outline-primary form-control p-1">Experienced</label>
-        <%= check_box_tag(:difficulty, "Pro", params[:difficulty] == "Pro" ? true : false, id: 'difficulty-pro', class: 'filter-trails') %>
-        <label for="difficulty-pro" class="btn btn-outline-primary form-control p-1">Pro</label>
-      </div>
-      <div class="search-bar">
-        <%= text_field_tag :query,
-          params[:query],
-          class: "form-control",
-          placeholder: "Find a trail"
-        %>
-        <%= submit_tag "Search", class: "btn btn-primary ms-2 form-control btn-search" %>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="all-the-card-trail">
-    <% @trails.each do |trail| %>
-      <div class="card-container-main" style="background-image: url('<%= trail.photo.url %>')">
-        <div class="card-container-inner">
-          <div class="card-title"><h1><%= link_to trail.name, trail_path(trail), class: "link-title-trail-index" %></h1></div>
-          <div class="card-description"><p class="card-description-text"><%= trail.description %></p></div>
-          <div class="card-information">
-            <div class="card-information-time">
-              <i class="fa-solid fa-clock fontawe-links"></i>
-                <p class="card-description-text"><%= (trail.duration / 60) %> Minutes</p>
-            </div>
-            <div class="card-information-time">
-              <i class="fa-solid fa-person-walking fontawe-links"></i>
-                <p class="card-description-text"><%= trail.distance %>Km</p>
-            </div>
-          </div>
+<div data-controller="search">
+  <div class="container">
+    <div class="container-of-buttons">
+      <%= form_with url: trails_path, method: :get, data: { search_target: 'form' } do |f| %>
+        <div class="container-search-btn">
+          <%= check_box_tag(:difficulty, "Beginner", params[:difficulty] == "Beginner" ? true : false, id: 'difficulty-beginner', class: 'filter-trails') %>
+          <label for="difficulty-beginner" class="btn btn-outline-primary form-control p-1">Beginner</label>
+          <%= check_box_tag(:difficulty, "Intermediate", params[:difficulty] == "Intermediate" ? true : false, id: 'difficulty-inter', class: 'filter-trails') %>
+          <label for="difficulty-inter" class="btn btn-outline-primary form-control p-1">Intermediate</label>
+          <%= check_box_tag(:difficulty, "Experienced", params[:difficulty] == "Experienced" ? true : false, id: 'difficulty-exper', class: 'filter-trails') %>
+          <label for="difficulty-exper" class="btn btn-outline-primary form-control p-1">Experienced</label>
+          <%= check_box_tag(:difficulty, "Pro", params[:difficulty] == "Pro" ? true : false, id: 'difficulty-pro', class: 'filter-trails') %>
+          <label for="difficulty-pro" class="btn btn-outline-primary form-control p-1">Pro</label>
         </div>
-      </div>
-    <% end %>
+          <%= f.text_field :query,
+                            class: "form-control",
+                            placeholder: 'Type a trail name',
+                            value: params[:query],
+                            data: { search_target: 'input' ,
+                            action: 'keyup->search#update'
+                            } %>
+        </div>
+      <% end %>
+    </div>
+    <div data-search-target="list" class="all-the-card-trail">
+      <%= render 'list', trails: @trails %>
+    </div>
   </div>
 </div>

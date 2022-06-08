@@ -6,6 +6,11 @@ class TrailsController < ApplicationController
     @trails = Trail.all
     @trails = @trails.where(difficulty: params[:difficulty]) if params[:difficulty].present?
     @trails = @trails.where("name ILIKE :query OR location ILIKE :query", query: "%#{params[:query]}%") if params[:query].present?
+
+    respond_to do |format|
+      format.html # Follow regular flow of Rails
+      format.text { render partial: 'trails/list', locals: {trails: @trails}, formats: [:html] }
+    end
   end
 
   def show
