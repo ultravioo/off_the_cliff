@@ -41,6 +41,7 @@ button {
 	line-height: 35px;
 	background-color: $dark-green;
 	color: $white;
+	text-decoration: none;
 }
 
 .button-login {
@@ -70,6 +71,7 @@ $borderW: 2px;
 	// margin-bottom: 30px;
 	text-align: center;
 	text-transform: uppercase;
+	text-decoration: none;
 	color: $cyan;
 	font-size: 16px;
 	font-weight: bold;

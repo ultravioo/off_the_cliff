@@ -4,9 +4,8 @@
     <p class="text-select-login col-12 text-center">Explore new routes, be part of the comunity</p>
     <div class="col-12 d-flex justify-content-center">
       <div class="buttons container-login-selector-buttons">
-        <button class="blob-btn">
-          <%# <%= link_to "register", new_user_registration_path %>
-          REGISTER
+        <%= link_to new_user_registration_path, class:"blob-btn" do %>
+          register
           <span class="blob-btn__inner">
             <span class="blob-btn__blobs">
               <span class="blob-btn__blob"></span>
@@ -15,11 +14,8 @@
               <span class="blob-btn__blob"></span>
             </span>
           </span>
-        </button>
-
-        <button class="button-select">
-          LOGIN
-        </button>
+        <% end %>
+        <%= link_to "LOGIN", new_user_session_path, class: "button-select" %>
       </div>
     </div>
   </div>
