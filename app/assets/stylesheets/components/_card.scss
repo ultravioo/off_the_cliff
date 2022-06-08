@@ -1,205 +1,234 @@
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 h1 {
-  font-family: "Koulen", cursive;
+	font-family: "Koulen", cursive;
 }
 
 .card-container-main {
-  max-width: 394px;
-  height: 250px;
-  background-size: cover;
-  box-shadow: 0px 8px 14px -2px rgba(30, 30, 30, 0.5);
-  border-radius: 10px;
-  background-position: center;
-  margin-bottom: 30px;
+	max-width: 394px;
+	height: 250px;
+	background-size: cover;
+	box-shadow: 0px 8px 14px -2px rgba(30, 30, 30, 0.5);
+	border-radius: 10px;
+	background-position: center;
+	margin-bottom: 30px;
 }
 
 .card-container-inner {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.77%, rgba(0, 0, 0, 0.4) 45.83%, #000000 100%);
-  border-radius: 10px;
-  width: inherit;
-  height: inherit;
-  display: flex;
-  flex-direction: column;
-  margin: 10px auto;
-  justify-content: flex-end;
-  padding: 20px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+	background-image: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 31.77%,
+		rgba(0, 0, 0, 0.4) 45.83%,
+		#000000 100%
+	);
+	border-radius: 10px;
+	width: inherit;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	margin: 10px auto;
+	justify-content: flex-end;
+	padding: 20px;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 .card-description {
-  text-align: justify;
-  margin-bottom: 5px;
+	text-align: justify;
+	margin-bottom: 5px;
 }
 
 .card-information {
-  display: flex;
+	display: flex;
 }
 
 .fontawe-links {
-  padding-top: 4px;
-  padding-right: 2px;
-  color: white;
-  margin: 0;
+	padding-top: 4px;
+	padding-right: 2px;
+	color: white;
+	margin: 0;
 }
 
 .card-title {
-  font-size: 36px;
-  color: white;
-  font-weight: 400;
-  text-decoration: none;
-  margin: 0;
+	font-size: 36px;
+	color: white;
+	font-weight: 400;
+	text-decoration: none;
+	margin: 0;
 }
 
 .link-title-trail-index {
-  text-decoration: none;
-  color: $white;
+	text-decoration: none;
+	color: $white;
 }
 
 .card-description-text {
-  color: white;
-  font-family: oswald;
-  font-size: 16px;
-  font-weight: 200;
-  margin: 0;
+	color: white;
+	font-family: oswald;
+	font-size: 16px;
+	font-weight: 200;
+	margin: 0;
 }
 
 .card-information-time {
-  display: flex;
-  padding-right: 20px;
-  margin: 0;
+	display: flex;
+	padding-right: 20px;
+	margin: 0;
 }
 
 .card-pin-question {
-  font-family: oswald;
-  color: white;
+	font-family: oswald;
+	color: white;
 }
 
 .card-container-pin-inner {
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 31.77%, rgba(0, 0, 0, 0.4) 45.83%, #000000 100%);
-  border-radius: 10px;
-  width: inherit;
-  height: inherit;
-  display: flex;
-  flex-direction: column;
-  margin: 10px auto;
-  justify-content: center;
-  padding: 20px;
-  text-overflow: ellipsis;
-  overflow: hidden;
+	background-image: linear-gradient(
+		180deg,
+		rgba(0, 0, 0, 0) 31.77%,
+		rgba(0, 0, 0, 0.4) 45.83%,
+		#000000 100%
+	);
+	border-radius: 10px;
+	width: inherit;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	margin: 10px auto;
+	justify-content: center;
+	padding: 20px;
+	text-overflow: ellipsis;
+	overflow: hidden;
 }
 
 button {
-  color: white;
-  border-radius: 10px;
-  width: 50%;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  margin: 10px;
+	color: white;
+	border-radius: 10px;
+	width: 50%;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	margin: 10px;
 }
 
 #no {
-  background-color: $orange;
-  border: $orange;
+	background-color: $orange;
+	border: $orange;
 }
 
 #yes {
-  background-color: $light-green ;
-  border: $light-green
+	background-color: $light-green;
+	border: $light-green;
 }
 
 .choose-answer {
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-items: center;
 }
 
 .card-container-pin-main {
-  max-width: 394px;
-  height: 180px;
-  // background-image: url("https://res.cloudinary.com/rubberd/image/upload/v1654066639/offthecliff/15.2_ur0zbb.jpg");
-  background-size: cover;
-  box-shadow: 0px 8px 14px -2px rgba(30, 30, 30, 0.5);
-  border-radius: 10px;
-  background-position: center;
+	max-width: 394px;
+	height: 180px;
+	// background-image: url("https://res.cloudinary.com/rubberd/image/upload/v1654066639/offthecliff/15.2_ur0zbb.jpg");
+	background-size: cover;
+	box-shadow: 0px 8px 14px -2px rgba(30, 30, 30, 0.5);
+	border-radius: 10px;
+	background-position: center;
 }
 
 .button-show {
-  border-radius: 50px;
-  background-color: #113630;
-  padding: 7px;
-  color: white;
-
+	border-radius: 50px;
+	background-color: #113630;
+	padding: 7px;
+	color: white;
 }
 
 .down-button {
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
 #btn-review-show {
-  width: 400px;
+	width: 400px;
 }
 
 .whole-hike-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .all-the-card-trail {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-items: center;
 }
 
 .grid-up-and-down {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .grid-up {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .grid-down {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .grid-square {
-  background-color: hwb(0 99% 0%);
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  box-shadow: 10px;
-  padding: 10px;
-  margin: 5px;
-  box-shadow: 4px 4px #888888;
+	background-color: hwb(0 99% 0%);
+	width: 120px;
+	height: 120px;
+	border-radius: 10px;
+	box-shadow: 10px;
+	padding: 10px;
+	margin: 5px;
+	box-shadow: 4px 4px #888888;
 }
 
 .grid-square p {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
-  font-size: 20px;
-  margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	font-size: 20px;
+	margin-top: 30px;
+}
+
+.container-of-buttons {
+	margin: 25px 0px;
+	margin-bottom: 35px;
 }
 
 .description-bottom {
-  background-color: hwb(0 99% 0%);
-  border-radius: 10px;
-  box-shadow: 10px;
-  padding: 10px;
-  margin: 10px;
-  box-shadow: 4px 4px 4px 4px #888888;
+	background-color: hwb(0 99% 0%);
+	border-radius: 10px;
+	box-shadow: 10px;
+	padding: 10px;
+	margin: 10px;
+	box-shadow: 4px 4px 4px 4px #888888;
+}
+
+.container-search-btn {
+	display: grid;
+	grid-template-columns: 0px 1fr 5px 1fr 5px 1fr 5px 1fr;
+}
+
+.btn-search {
+	width: 93%;
+}
+
+.search-bar {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	margin-top: 15px;
 }
