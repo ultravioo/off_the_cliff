@@ -82,13 +82,13 @@ export default class extends Controller {
 			customMarker.className = "marker";
 
 			if (pin.kind == "Roadblock")
-				customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.12.21-modified_qngs1r.png"}`;
+				customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654692831/offthecliff/Screenshot_2022-06-08_at_14.52.58-modified_irjhsw.png"}`;
 			if (pin.kind == "Picture Spot")
 				customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.13.15-modified_r7wcuz.png"}`;
 			if (pin.kind == "Camping Site")
 				customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.11.09-modified_e6uwbv.png"}`;
 			if (pin.kind == "Warning")
-				customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654503337/offthecliff/Screenshot_2022-06-06_at_10.12.21-modified_qngs1r.png"}`;
+				customMarker.style.backgroundImage = `url('${"https://res.cloudinary.com/rubberd/image/upload/v1654692831/offthecliff/Screenshot_2022-06-08_at_14.52.58-modified_irjhsw.png"}`;
 
 			customMarker.style.backgroundSize = "contain";
 			customMarker.style.width = "30px";
