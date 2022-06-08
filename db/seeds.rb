@@ -13,9 +13,9 @@ User.destroy_all
 Hike.destroy_all
 Trail.destroy_all
 Point.destroy_all
-Pin.destroy_all
 Favorite.destroy_all
 Review.destroy_all
+Pin.destroy_all
 
 user = User.create(email: "fernandogomezv@gmail.com", first_name: "Fernando", last_name: "Gomez", username: "fernandogomezv", password: "123456" )
 user2 = User.create(email: "juandirection@gmail.com", first_name: "Juan", last_name: "Direction", username: "juandirection", password: "123456" )
@@ -27,7 +27,7 @@ user5 = User.create(email: "dean@goated.com", first_name: "Dean", last_name: "Po
 url100 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654501549/offthecliff/deanpotter_bcyipq.webp')
 user5.photo.attach(io: url100, filename: '100.jpg', content_type: 'images/jpg')
 
-roraima = Trail.create!(name: "Mount Roraima", distance: 69, duration: 93_600, elevation: 3881, difficulty: "Pro", description: "Discover this 68.4-km loop trail near Gran Sabana, Bolívar. Generally considered a challenging route, it takes an average of 25 h 37 min to complete. This is a popular trail for backpacking and hiking, but you can still enjoy some solitude during quieter times of day.", location: "La Gran Sabana, Venezuela", user: user)
+roraima = Trail.create!(name: "Mount Roraima", distance: 69, duration: 93_600, elevation: 3881, difficulty: "Pro", description: "Discover this 68.4-km loop trail near Gran Sabana, Bolívar. Generally considered a challenging route, it takes an average of 25 h 37 min to complete.", location: "La Gran Sabana, Venezuela", user: user)
 url = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654167141/offthecliff/roraima_mrixmf.jpg')
 roraima.photo.attach(io: url, filename: '1.jpg', content_type: 'images/jpg')
 #check
@@ -37,12 +37,12 @@ url2 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654167141/off
 monserrate.photo.attach(io: url2, filename: '2.jpg', content_type: 'images/jpg')
 #check
 
-barbizon = Trail.create!(name: "Barbizon and Tillaie Reserve Loop", distance: 15, duration: 13_200, elevation: 296, difficulty: "Intermediate", description: "Experience this 15.3-km loop trail near Fontainebleau, Seine-et-Marne. Generally considered a moderately challenging route, it takes an average of 3 h 43 min to complete.", location: "Forêt Domaniale de Fontainebleau, France", user: user3)
+barbizon = Trail.create!(name: "Barbizon and Tillaie Reserve Loop", distance: 15, duration: 13_200, elevation: 296, difficulty: "Intermediate", description: "Experience this 15.3-km loop trail near Fontainebleau, Seine-et-Marne. Generally considered a moderately challenging route.", location: "Forêt Domaniale de Fontainebleau, France", user: user3)
 url3 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654167141/offthecliff/barbizon_xitmum.jpg')
 barbizon.photo.attach(io: url3, filename: '3.jpg', content_type: 'images/jpg')
 #check
 
-salto = Trail.create!(name: "Salto del cabrero", distance: 8, duration: 8_000, elevation: 479, difficulty: "Beginner", description: "Get to know this 7.6-km point-to-point trail near Benaocaz, Cádiz. Generally considered a moderately challenging route, it takes an average of 2 h 25 min to complete. This trail is great for hiking.", location: "Parque sierra de grazalema, Spain", user: user4)
+salto = Trail.create!(name: "Salto del cabrero", distance: 8, duration: 8_000, elevation: 479, difficulty: "Beginner", description: "Get to know this 7.6-km point-to-point trail near Benaocaz, Cádiz. Generally considered a moderately challenging route. This trail is great for hiking!", location: "Parque sierra de grazalema, Spain", user: user4)
 url4 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654167141/offthecliff/cabrero_nnxvwe.jpg')
 salto.photo.attach(io: url4, filename: '4.jpg', content_type: 'images/jpg')
 #check
@@ -52,12 +52,12 @@ url5 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654174673/off
 gr34.photo.attach(io: url5, filename: '5.jpg', content_type: 'images/jpg')
 #check
 
-siete = Trail.create!(name: "Seven Peaks", distance: 12, duration: 14_400, elevation: 569, difficulty: "Experienced", description: "Discover this 12.1-km loop trail near Cercedilla, Community of Madrid. Generally considered a challenging route, it takes an average of 4 h 13 min to complete. This is a popular trail for backpacking, hiking, and snowshoeing, but you can still enjoy some solitude during quieter times of day", location: "Parque sierra de grazalema, Spain", user: user4)
+siete = Trail.create!(name: "Seven Peaks", distance: 12, duration: 14_400, elevation: 569, difficulty: "Experienced", description: "Discover this 12.1-km loop trail near Cercedilla, Community of Madrid. This is a popular trail for backpacking, hiking, and snowshoeing.", location: "Parque sierra de grazalema, Spain", user: user4)
 url6 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654183594/offthecliff/siete_zkb1pk.jpg')
 siete.photo.attach(io: url6, filename: '6.jpg', content_type: 'images/jpg')
 #check
 
-cochino = Trail.create!(name: "La Pedriza - Canto Cochino", distance: 12, duration: 12_600, elevation: 426, difficulty: "Intermediate", description: "Head out on this 12.1-km loop trail near Manzanares El Real, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 3 h 36 min to complete.", location: "Parque Regional de la Cuenca Alta de Manzanares, Spain", user: user4)
+cochino = Trail.create!(name: "La Pedriza - Canto Cochino", distance: 12, duration: 12_600, elevation: 426, difficulty: "Intermediate", description: "Head out on this 12.1-km loop trail near Manzanares El Real, Community of Madrid. Generally considered a moderately challenging route.", location: "Parque Regional de la Cuenca Alta de Manzanares, Spain", user: user4)
 url7 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654183999/offthecliff/cochino_o7mx0p.jpg')
 cochino.photo.attach(io: url7, filename: '7.jpg', content_type: 'images/jpg')
 #check
@@ -67,7 +67,7 @@ url8 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654498991/off
 glorieta.photo.attach(io: url8, filename: '8.jpg', content_type: 'images/jpg')
 #check
 
-rascafria = Trail.create!(name: "Rascafría Trail", distance: 8, duration: 9_000, elevation: 344, difficulty: "Intermediate", description: "Get to know this 7.6-km loop trail near Rascafría, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 2 h 32 min to complete.", location: "Madrid, Spain", user: user4)
+rascafria = Trail.create!(name: "Rascafría Trail", distance: 8, duration: 9_000, elevation: 344, difficulty: "Intermediate", description: "Get to know this 7.6-km loop trail near Rascafría, Community of Madrid. Considered a moderately challenging route, it takes 2 h 32 min to complete.", location: "Madrid, Spain", user: user4)
 url9 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654499465/offthecliff/rascafria_lz3hf9.jpg')
 rascafria.photo.attach(io: url9, filename: '9.jpg', content_type: 'images/jpg')
 #check
@@ -77,25 +77,25 @@ url10 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654499831/of
 hecce.photo.attach(io: url10, filename: '10.jpg', content_type: 'images/jpg')
 #check
 
-riasbajas = Trail.create!(name: "Rias Bajas - Santiago de Compostela", distance: 782, duration: 709_200, elevation: 14_534, difficulty: "Pro", description: "Enjoy this 782.6-km point-to-point trail near Madrid, Community of Madrid. Generally considered a challenging route, it takes an average of 197 h 26 min to complete. This trail is great for road biking and bike touring.", location: "Madrid, Spain", user: user4)
+riasbajas = Trail.create!(name: "Rias Bajas - Santiago de Compostela", distance: 782, duration: 709_200, elevation: 14_534, difficulty: "Pro", description: "Enjoy this 782.6-km point-to-point trail near Madrid, Community of Madrid. Generally considered a challenging route, it takes an average of 197 h 26 min to complete.", location: "Madrid, Spain", user: user4)
 url11 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654524489/offthecliff/roasbajas_zdd7yc.jpg')
 riasbajas.photo.attach(io: url11, filename: '11.jpg', content_type: 'images/jpg')
 
-tirso = Trail.create!(name: "Tirso de Molina - templo de Debod", distance: 11, duration: 10_800, elevation: 259, difficulty: "Beginner", description: "Explore this 11.9-km loop trail near Madrid, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 3 h 0 min to complete. This trail is great for walking.",location: "Madrid, Spain", user: user4)
+tirso = Trail.create!(name: "Tirso de Molina - templo de Debod", distance: 11, duration: 10_800, elevation: 259, difficulty: "Beginner", description: "Explore this 11.9-km loop trail near Madrid, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 3 h 0 min to complete.",location: "Madrid, Spain", user: user4)
 url12 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654525326/offthecliff/templo1_k1jnzw.jpg')
 tirso.photo.attach(io: url12, filename: '12.jpg', content_type: 'images/jpg')
 
-faron = Trail.create!(name: "Fort-Rouge to mount Faron loop", distance: 12, duration: 14_400, elevation: 557, difficulty: "Intermediate", description: "Try this 12.1-km loop trail near Toulon, Var. Generally considered a moderately challenging route, it takes an average of 4 h 4 min to complete. This is a popular trail for birding and hiking, but you can still enjoy some solitude during quieter times of day. The trail is open year-round and is beautiful to visit anytime.", location: "Toulon, Var", user: user4)
+faron = Trail.create!(name: "Fort-Rouge to mount Faron loop", distance: 12, duration: 14_400, elevation: 557, difficulty: "Intermediate", description: " This is a popular trail for birding and hiking. The trail is open year-round and is beautiful to visit anytime.", location: "Toulon, Var", user: user4)
 url13 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654524463/offthecliff/Le-Mont-Faron_i49fz1.jpg')
 faron.photo.attach(io: url13, filename: '13.jpg', content_type: 'images/jpg')
 #check
 
-noirmoutier = Trail.create!(name: "Noirmoutier to Sables-d'Olonne", distance: 93, duration: 76_320, elevation: 660, difficulty: "Intermediate", description: "Enjoy this 93.2-km point-to-point trail near Noirmoutier-en-l'Île, Vendée. Generally considered a moderately challenging route, it takes an average of 21 h 14 min to complete.", location: "Noirmoutier-en-ile, Vendée", user: user3)
+noirmoutier = Trail.create!(name: "Noirmoutier to Sables-d'Olonne", distance: 93, duration: 76_320, elevation: 660, difficulty: "Intermediate", description: "Enjoy this 93.2-km point-to-point trail near Noirmoutier-en-l'Île, Vendée. Considered a moderately challenging route, it takes an average of 21 h 14 min to complete.", location: "Noirmoutier-en-ile, Vendée", user: user3)
 url14 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654524463/offthecliff/adobestock-159200544_limt6x.jpg')
 noirmoutier.photo.attach(io: url14, filename: '14.jpg', content_type: 'images/jpg')
 #check
 
-sayulita = Trail.create!(name: "Sayulita - San Pancho", distance: 6, duration: 7_920, elevation: 259, difficulty: "Beginner", description: "Explore this 6.4-km out-and-back trail near Bahía de Banderas, Nayarit. Generally considered an easy route, it takes an average of 2 h 2 min to complete. This trail is great for birding, hiking, and trail running, and it's unlikely you'll encounter many other people while exploring. ", location: "Banderas, Mexico", user: user2)
+sayulita = Trail.create!(name: "Sayulita - San Pancho", distance: 6, duration: 7_920, elevation: 259, difficulty: "Beginner", description: "Explore this 6.4-km out-and-back trail near Bahía de Banderas, Nayarit. It's unlikely you'll encounter many other people while exploring. ", location: "Banderas, Mexico", user: user2)
 url15 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654525335/offthecliff/hiking-cerro-del-mono-sayulita-punta-mita-1-1_k2fxcs.jpg')
 sayulita.photo.attach(io: url15, filename: '15.jpg', content_type: 'images/jpg')
 
@@ -103,7 +103,7 @@ casacada = Trail.create!(name: "Cascada Palo Maria", distance: 3, duration: 3_60
 url16 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654524463/offthecliff/adobestock-159200544_limt6x.jpg')
 casacada.photo.attach(io: url16, filename: '16.jpg', content_type: 'images/jpg')
 
-vassiviere = Trail.create!(name: "Lake Vassivière Loop", distance: 24, duration: 21_600, elevation: 496, difficulty: "Intermediate", description: "Experience this 23.8-km loop trail near Beaumont-du-Lac, Haute-Vienne. Generally considered a moderately challenging route, it takes an average of 6 h 7 min to complete. This trail is great for camping, road biking, and bike touring. The best times to visit this trail are February through November.",location: "Limousin, France", user: user)
+vassiviere = Trail.create!(name: "Lake Vassivière Loop", distance: 24, duration: 21_600, elevation: 496, difficulty: "Intermediate", description: "Generally considered a moderately challenging route. This trail is great for camping and road biking. The best times to visit are February through November.",location: "Limousin, France", user: user)
 url17 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654524463/offthecliff/adobestock-159200544_limt6x.jpg')
 vassiviere.photo.attach(io: url17, filename: '17.jpg', content_type: 'images/jpg')
 
@@ -112,7 +112,7 @@ url18 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654528316/of
 plane.photo.attach(io: url18, filename: '17.jpg', content_type: 'images/jpg')
 #check
 
-naiguata = Trail.create!(name: "Naiguata Peak", distance: 16, duration: 32_400, elevation: 1881, difficulty: "Pro", description: "Traditional route of ascent to the peak taking the path through PGP La Julia and following the La Julia - Mirador del Edén trail, upon reaching the viewpoint, take the Dos Banderas trail to the top of Topo Dos Banderas, continuing the ascent along the path towards the Topo Goering, Topo Galindo and finally on the way up to the top of Pico Naiguatá.", location: "Caracas, Venezuela", user: user4)
+naiguata = Trail.create!(name: "Naiguata Peak", distance: 16, duration: 32_400, elevation: 1881, difficulty: "Pro", description: "Traditional route of ascent to the peak taking the path through PGP La Julia and following the La Julia - Mirador del Edén trail.", location: "Caracas, Venezuela", user: user4)
 url19 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654527787/offthecliff/1614029_10152276346194709_1630007891_o_lb0mpa.jpg')
 naiguata.photo.attach(io: url19, filename: '19.jpg', content_type: 'images/jpg')
 
@@ -120,7 +120,7 @@ humboldt = Trail.create!(name: "Pico Humboldt", distance: 3, duration: 5_400, el
 url20 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654528384/offthecliff/sT8nzy80_sfrng2.jpg')
 humboldt.photo.attach(io: url20, filename: '20.jpg', content_type: 'images/jpg')
 
-kukenan = Trail.create!(name: "Kukenan", distance: 69, duration: 93_600, elevation: 3881, difficulty: "Pro", description: "Discover this 68.4-km loop trail near Gran Sabana, Bolívar. Generally considered a challenging route, it takes an average of 25 h 37 min to complete. This is a popular trail for backpacking and hiking, but you can still enjoy some solitude during quieter times of day.", location: "La Gran Sabana, Venezuela", user: user)
+kukenan = Trail.create!(name: "Kukenan", distance: 69, duration: 93_600, elevation: 3881, difficulty: "Pro", description: "Discover this loop trail near Gran Sabana, Bolívar. Considered a challenging route. This is a popular trail for backpacking/hiking, but you can still enjoy some solitude during quieter times of day.", location: "La Gran Sabana, Venezuela", user: user)
 url21 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654527895/offthecliff/kLqVXgpQ_irs8sn.jpg')
 kukenan.photo.attach(io: url21, filename: '21.jpg', content_type: 'images/jpg')
 #check

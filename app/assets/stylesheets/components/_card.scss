@@ -183,7 +183,8 @@ button {
   box-shadow: 10px;
   padding: 10px;
   margin: 5px;
-  box-shadow: 4px 4px #888888;
+  margin-top: 10px;
+  box-shadow: 2px 2px #888888;
 }
 
 .grid-square p {
@@ -198,8 +199,15 @@ button {
 .description-bottom {
   background-color: hwb(0 99% 0%);
   border-radius: 10px;
-  box-shadow: 10px;
+  box-shadow: 2px;
   padding: 10px;
-  margin: 10px;
-  box-shadow: 4px 4px 4px 4px #888888;
+  box-shadow: 2px 2px 2px 2px #888888;
+  width: 240px;
+  height: 255px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  margin-top: 10px;
 }
