@@ -18,11 +18,11 @@
 	z-index: 2;
 	position: fixed;
 	background-color: $white;
-	height: 133px;
-	width: 133px;
-	border-radius: 50%;
-	top: -66.5px;
-	left: -66.5px;
+	height: 45px;
+	width: 55px;
+	border-bottom-right-radius: 25%;
+	top: 0;
+	left: 0;
 }
 
 .bar {
