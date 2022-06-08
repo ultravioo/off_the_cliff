@@ -1,0 +1,18 @@
+<% trails.each do |trail| %>
+  <div class="card-container-main" style="background-image: url('<%= trail.photo.url %>')">
+    <div class="card-container-inner">
+      <div class="card-title"><h1><%= link_to trail.name, trail_path(trail), class: "link-title-trail-index" %></h1></div>
+      <div class="card-description"><p class="card-description-text"><%= trail.description %></p></div>
+      <div class="card-information">
+        <div class="card-information-time">
+          <i class="fa-solid fa-clock fontawe-links"></i>
+        <p class="card-description-text"><%= (trail.duration / 60) %> Minutes</p>
+        </div>
+        <div class="card-information-time">
+          <i class="fa-solid fa-person-walking fontawe-links"></i>
+          <p class="card-description-text"><%= trail.distance %>Km</p>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
