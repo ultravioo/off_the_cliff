@@ -12,6 +12,7 @@ class TrailsController < ApplicationController
     @hike = Hike.new
     @favorite = Favorite.new
     @trail = Trail.find(params[:id])
+    @reviews = @trail.reviews
     @pins = @trail.pins.map do |point|
       {
         lat: point.latitude,

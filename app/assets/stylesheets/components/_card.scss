@@ -194,6 +194,9 @@ button {
   margin: 5px;
   margin-top: 10px;
   box-shadow: 2px 2px #888888;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .grid-square p {
@@ -232,4 +235,32 @@ button {
 	display: grid;
 	grid-template-columns: 2fr 1fr;
 	margin-top: 15px;
+}
+
+.grid-square h1 {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.trail-reviews-bottom {
+  background-color: hwb(0 99% 0%);
+  border-radius: 10px;
+  box-shadow: 2px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px 2px #888888;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-individual {
+  background-color: hwb(0 99% 0%);
+  border-radius: 10px;
+  padding: 10px;
+  border-color: hwb(0 82% 16%) ;
+  margin-bottom: 20px;
 }

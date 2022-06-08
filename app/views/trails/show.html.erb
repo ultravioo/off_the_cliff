@@ -3,7 +3,7 @@
     <div  id="trail-name"> <h1 class="title-header"><%= @trail.name %></h1> </div>
   </div>
 
-  <div style="width: 100%; height: 550px;"
+  <div class=""style="width: 95%; height: 550px;">
   data-controller="mapbox"
   data-mapbox-points-value="<%= @points.to_json %>"
   data-mapbox-pins-value="<%= @pins.to_json %>"
@@ -40,25 +40,49 @@
     <div class="grid-up" >
       <div class="grid-square">
         <p><strong></strong> <%= @trail.distance %> km</p>
+        <h1>🥾</h1>
       </div>
       <div class="grid-square">
         <p><strong></strong> <%= (@trail.duration / 60) %> minutes</p>
+        <h1>🕖</h1>
       </div>
     </div>
     <div class="grid-down" >
       <div class="grid-square">
         <p><strong></strong> <%= @trail.elevation %> meters</p>
+        <h1>🏔</h1>
       </div>
       <div class="grid-square">
         <p><strong></strong> <%= @trail.difficulty %></p>
+        <h1>👣</h1>
       </div>
     </div>
   </div>
 
   <div class="description-bottom">
-      <p><strong></strong> <%= @trail.description %></p>
+      <p> <%= @trail.description %></p>
   </div>
-  
+
+  </div>
+  <div class="trail-reviews-bottom">
+  <% @reviews.each do |review| %>
+  <div class="review-individual">
+  <p> <%= review.content %> </p>
+    <% case review.rating %>
+    <% when 5 %>
+    <%= "⭐⭐⭐⭐⭐" %>
+    <% when 4 %>
+    <%= "⭐⭐⭐⭐" %>
+    <% when 3 %>
+    <%= "⭐⭐⭐" %>
+    <% when 2 %>
+    <%= "⭐⭐" %>
+    <% when 1 %>
+    <%= "⭐" %>
+    <% end %>
+  </div>
+
+  <% end %>
   </div>
 
 </div>
