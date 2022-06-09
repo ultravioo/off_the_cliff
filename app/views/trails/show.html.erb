@@ -29,33 +29,28 @@
     </div>
   </div>
 </div>
-
-<div class="trail-show-card-container">
+<div class="container">
   <div class="info">
     <h2 class="location-info"><%= @trail.location %></h2>
   </div>
-  <div class="third">
+  <div class="">
 
-  <div class="grid-up-and-down">
-    <div class="grid-up" >
-      <div class="grid-square">
-        <p><strong></strong> <%= @trail.distance %> km</p>
-        <h1>🥾</h1>
-      </div>
-      <div class="grid-square">
-        <p><strong></strong> <%= (@trail.duration / 60) %> min</p>
-        <h1>🕖</h1>
-      </div>
+  <div class="grid-show">
+    <div class="grid-square">
+      <p><h1 class="emoji-grid">🥾</h1>
+      <%= @trail.distance %> km</p>
     </div>
-    <div class="grid-down" >
-      <div class="grid-square">
-        <p><strong></strong> <%= @trail.elevation %> m</p>
-        <h1>🏔</h1>
-      </div>
-      <div class="grid-square">
-        <p><strong></strong> <%= @trail.difficulty %></p>
-        <h1>👣</h1>
-      </div>
+    <div class="grid-square">
+      <p><h1 class="emoji-grid">🕖</h1>
+      <%= (@trail.duration / 60) %> min</p>
+    </div>
+    <div class="grid-square">
+      <p><h1 class="emoji-grid">🏔</h1>
+      <%= @trail.elevation %> m</p>
+    </div>
+    <div class="grid-square">
+      <p><h1 class="emoji-grid">👣</h1>
+      <%= @trail.difficulty %></p>
     </div>
   </div>
 
@@ -64,10 +59,11 @@
   </div>
 
   </div>
+  <div class="container">
   <div class="trail-reviews-bottom">
   <% @reviews.each do |review| %>
   <div class="review-individual">
-  <p> <%= review.content %> </p>
+    <p class="text-review"> <%= review.content %> </p>
     <% case review.rating %>
     <% when 5 %>
     <%= "⭐⭐⭐⭐⭐" %>
@@ -83,6 +79,7 @@
   </div>
 
   <% end %>
+  </div>
   </div>
 
 </div>

@@ -173,61 +173,7 @@ button {
 	flex-direction: column;
 	justify-items: center;
 }
-
-.grid-up-and-down {
-	display: flex;
-	flex-direction: column;
-}
-
-.grid-up {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-.grid-down {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-.grid-square {
-	background-color: hwb(0 99% 0%);
-	width: 120px;
-	height: 120px;
-	border-radius: 10px;
-	box-shadow: 10px;
-	padding: 10px;
-	margin: 5px;
-	margin-top: 10px;
-	box-shadow: 2px 2px #888888;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
-}
-
-.grid-square p {
-	display: flex;
-	justify-content: center;
-	align-content: center;
-	align-items: center;
-	font-size: 20px;
-	margin-top: 30px;
-}
-
-.container-of-buttons {
-	margin: 25px 0px;
-	margin-bottom: 35px;
-}
-
-.description-bottom {
-	background-color: hwb(0 99% 0%);
-	border-radius: 10px;
-	box-shadow: 10px;
-	padding: 10px;
-	margin: 10px;
-	box-shadow: 2px 2px #888888;
-}
+// -------------------------------------------------------------
 
 .container-search-btn {
 	display: grid;
@@ -243,6 +189,39 @@ button {
 	grid-template-columns: 2fr 1fr;
 	margin-top: 15px;
 }
+// ----------------------------------------------------------
+
+.grid-show {
+	display: flex;
+	flex-direction: row;
+	text-align: center;
+}
+
+.emoji-grid {
+	font-size: 30px;
+}
+
+.grid-square {
+	width: 120px;
+	height: 120px;
+	border-radius: 10px;
+	box-shadow: 10px;
+	padding: 10px;
+	margin: 5px;
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.grid-square p {
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
 
 .grid-square h1 {
 	display: flex;
@@ -252,24 +231,25 @@ button {
 	margin-bottom: 5px;
 }
 
-.trail-reviews-bottom {
-	background-color: hwb(0 99% 0%);
+.description-bottom {
+	background-color: $white;
 	border-radius: 10px;
+	box-shadow: 10px;
 	padding: 10px;
-	box-shadow: 2px 2px 2px 2px #888888;
-	margin-left: 10px;
-	margin-right: 10px;
-	display: flex;
-	flex-direction: column;
-	height: 210px;
+	margin: 10px;
 }
 
 .review-individual {
-	background-color: hwb(0 99% 0%);
+	background-color: $white;
 	border-radius: 10px;
 	padding: 10px;
-	border-color: hwb(0 82% 16%);
 	margin-bottom: 20px;
+}
+
+.text-review {
+	margin-bottom: 10px;
+
+	text-transform: capitalize;
 }
 
 .form-control {
