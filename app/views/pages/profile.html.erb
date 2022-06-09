@@ -10,58 +10,36 @@
 
 <div class="level-container d-flex">
   <div class="level-text">
-  <h1 >Level: ⛰⛰⛰</h1>
+  <h1 >Level ⛰⛰⛰</h1>
   </div>
 </div>
 
 <div class="container square-grid-profile">
 
 <div class="square-row">
-  <p class="square-title"> total km: </p>
-  <h1><%= @user.ended_distances %> Km</h1>
   <p class="emoji">🥾</p>
+  <h1><%= @user.ended_distances %> Km</h1>
+  <p class="square-title"> In total </p>
 </div>
 
 <div class="square-row">
-<p class="square-title"> total elevation: </p>
-<h1><%=  @user.ended_altitudes %> m</h1>
 <p class="emoji">🏔</p>
+<h1><%= @user.ended_altitudes %> M</h1>
+<p class="square-title"> Elevated </p>
 </div>
 
 <div class="square-row">
-<p class="square-title"> pins confirmed: </p>
-<h1><%=  @user.confirmed_pins %> </h1>
 <p class="emoji">📌</p>
+<h1><%= @user.confirmed_pins %> </h1>
+<p class="square-title"> Pins Confirmed </p>
 </div>
 </div>
-
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    </div>
-    <div class="carousel-item">
-      <div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div>
-        <h1>Your Favorites Routes</h1>
-        <% @user.favorites.each do |favorite| %>
-        <h1><%= favorite.trail.name %></h1>
-        <% end %>
-      </div>
-    </div>
+<h1 style="color: #4a695d; text-align: center" >Your Favorites Routes</h1>
+<div class="container-profile-carousel">
+<figure class="icon-cards mt-3">
+  <div class="icon-cards__content">
+  <% @user.favorites.each do |favorite| %>
+    <div class="icon-cards__item d-flex align-items-center justify-content-center" style="background-image: url('<%= favorite.trail.photo.url %>'); background-size: cover; background-position: center"><%= favorite.trail.name %></div>
+    <% end %>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+</figure>
