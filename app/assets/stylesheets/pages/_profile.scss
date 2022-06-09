@@ -12,6 +12,7 @@
 	background-size: cover;
 	background-position: center;
 	position: relative;
+	box-shadow: 1px 1px 1px 1px #888888;
 }
 
 .card-profile-name {
@@ -82,4 +83,27 @@
 .carousel-control-next {
 	height: 100%;
 	z-index: 0;
+}
+
+.square-row {
+	background-color: hwb(0 99% 0%);
+	width: 120px;
+	height: 120px;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 5px;
+	margin-top: 10px;
+	margin-bottom: 35px;
+	box-shadow: 1px 1px 2px 2px #888888;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-size: 15px;
+}
+
+.square-grid-profile {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
