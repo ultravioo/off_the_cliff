@@ -222,11 +222,11 @@ csv8.each do |row|
 end
 
 pin1 = Pin.create!(latitude: 36.70474000, longitude: -5.42274000, trail: salto, description: "dangerous dogs will bark at you", kind: "Warning")
-url200 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654692831/offthecliff/Screenshot_2022-06-08_at_14.52.58-modified_irjhsw.png')
+url200 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654610411/offthecliff/image_vkmgfg.jpg')
 pin1.photo.attach(io: url200, filename: '200.jpg', content_type: 'images/jpg')
 
 pin2 = Pin.create!(latitude: 36.71063000, longitude: -5.42455000, trail: salto, description: "A tree has fallen down and blocks the road", kind: "Roadblock")
-url201 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654692831/offthecliff/Screenshot_2022-06-08_at_14.52.58-modified_irjhsw.png')
+url201 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654610411/offthecliff/image_vkmgfg.jpg')
 pin2.photo.attach(io: url201, filename: '201.jpg', content_type: 'images/jpg')
 
 pin3 = Pin.create!(latitude: 36.74420000, longitude: -5.40692000, trail: salto, description: "Great to sleep for the first day", kind: "Camping Site")
@@ -246,5 +246,5 @@ url205 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654610411/o
 pin6.photo.attach(io: url205, filename: '205.jpg', content_type: 'images/jpg')
 
 pin7 = Pin.create!(latitude: 46.63170000, longitude: -1.88361000, trail: noirmoutier, description: "be careful when crossing the tides are very fast", kind: "Warning")
-url206 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654692831/offthecliff/Screenshot_2022-06-08_at_14.52.58-modified_irjhsw.png')
+url206 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654610411/offthecliff/image_vkmgfg.jpg')
 pin7.photo.attach(io: url206, filename: '206.jpg', content_type: 'images/jpg')

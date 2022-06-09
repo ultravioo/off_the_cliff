@@ -17,18 +17,21 @@
 <div class="container square-grid-profile">
 
 <div class="square-row">
-  <p> total km: </p>
+  <p class="square-title"> total km: </p>
   <h1><%= @user.ended_distances %> Km</h1>
+  <p class="emoji">🥾</p>
 </div>
 
 <div class="square-row">
-<p> total elevation: </p>
+<p class="square-title"> total elevation: </p>
 <h1><%=  @user.ended_altitudes %> m</h1>
+<p class="emoji">🏔</p>
 </div>
 
 <div class="square-row">
-<p> pins confirmed: </p>
+<p class="square-title"> pins confirmed: </p>
 <h1><%=  @user.confirmed_pins %> </h1>
+<p class="emoji">📌</p>
 </div>
 </div>
 
