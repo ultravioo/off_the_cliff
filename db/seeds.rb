@@ -62,12 +62,12 @@ url7 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654183999/off
 cochino.photo.attach(io: url7, filename: '7.jpg', content_type: 'images/jpg')
 #check
 
-glorieta = Trail.create!(name: "Mirador Peñarrubia", distance: 4, duration: 3_600, elevation: 101, difficulty: "Beginner", description: "Check out this 4.0-km loop trail near Madrid, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 1 h 4 min to complete.", location: "Glorieta de los pinos, Spain", user: user4)
+glorieta = Trail.create!(name: "Mirador Penarrubia", distance: 4, duration: 3_600, elevation: 101, difficulty: "Beginner", description: "Check out this 4.0-km loop trail near Madrid, Community of Madrid. Generally considered a moderately challenging route, it takes an average of 1 h 4 min to complete.", location: "Glorieta de los pinos, Spain", user: user4)
 url8 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654498991/offthecliff/glorieta_eem68k.jpg')
 glorieta.photo.attach(io: url8, filename: '8.jpg', content_type: 'images/jpg')
 #check
 
-rascafria = Trail.create!(name: "Rascafría Trail", distance: 8, duration: 9_000, elevation: 344, difficulty: "Intermediate", description: "Get to know this 7.6-km loop trail near Rascafría, Community of Madrid. Considered a moderately challenging route, it takes 2 h 32 min to complete.", location: "Madrid, Spain", user: user4)
+rascafria = Trail.create!(name: "Rascafria Trail", distance: 8, duration: 9_000, elevation: 344, difficulty: "Intermediate", description: "Get to know this 7.6-km loop trail near Rascafría, Community of Madrid. Considered a moderately challenging route, it takes 2 h 32 min to complete.", location: "Madrid, Spain", user: user4)
 url9 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654499465/offthecliff/rascafria_lz3hf9.jpg')
 rascafria.photo.attach(io: url9, filename: '9.jpg', content_type: 'images/jpg')
 #check
@@ -90,7 +90,7 @@ url13 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654524463/of
 faron.photo.attach(io: url13, filename: '13.jpg', content_type: 'images/jpg')
 #check
 
-noirmoutier = Trail.create!(name: "Noirmoutier to Sables-d'Olonne", distance: 93, duration: 76_320, elevation: 660, difficulty: "Intermediate", description: "Enjoy this 93.2-km point-to-point trail near Noirmoutier-en-l'Île, Vendée. Considered a moderately challenging route, it takes an average of 21 h 14 min to complete.", location: "Noirmoutier-en-ile, Vendée", user: user3)
+noirmoutier = Trail.create!(name: "Noirmoutier to Sables-d'Olonne", distance: 93, duration: 76_320, elevation: 660, difficulty: "Intermediate", description: "Enjoy this 93.2-km point-to-point trail near Noirmoutier-en-l'Île, Vendée. Considered a moderately challenging route, it takes an average of 21 h 14 min to complete.", location: "Noirmoutier-en-ile, France", user: user3)
 url14 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654524463/offthecliff/adobestock-159200544_limt6x.jpg')
 noirmoutier.photo.attach(io: url14, filename: '14.jpg', content_type: 'images/jpg')
 #check
@@ -103,7 +103,7 @@ casacada = Trail.create!(name: "Cascada Palo Maria", distance: 3, duration: 3_60
 url16 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654524463/offthecliff/adobestock-159200544_limt6x.jpg')
 casacada.photo.attach(io: url16, filename: '16.jpg', content_type: 'images/jpg')
 
-vassiviere = Trail.create!(name: "Lake Vassivière Loop", distance: 24, duration: 21_600, elevation: 496, difficulty: "Intermediate", description: "Generally considered a moderately challenging route. This trail is great for camping and road biking. The best times to visit are February through November.",location: "Limousin, France", user: user)
+vassiviere = Trail.create!(name: "Lake Vassiviere Loop", distance: 24, duration: 21_600, elevation: 496, difficulty: "Intermediate", description: "Generally considered a moderately challenging route. This trail is great for camping and road biking. The best times to visit are February through November.",location: "Limousin, France", user: user)
 url17 = URI.open('https://res.cloudinary.com/rubberd/image/upload/v1654524463/offthecliff/adobestock-159200544_limt6x.jpg')
 vassiviere.photo.attach(io: url17, filename: '17.jpg', content_type: 'images/jpg')
 
