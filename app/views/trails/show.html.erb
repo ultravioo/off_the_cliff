@@ -22,9 +22,9 @@
         <%= f.submit "Hike", class: "btn btn-outline-primary  form-control" %>
       <% end %>
     </div>
-    <div class=" icon col-4 text-center">
+    <div class="icon col-4 text-center">
       <%= link_to trail_favorites_path(@trail), method: :post do %>
-        <i id="heart" class="fa-regular fa-heart"></i>
+        <i id="heart" class="fa-solid fa-heart" data-controller="hearth" data-action="click->hearth#onClick" data-hearth-target="fontawesome"></i>
       <% end %>
     </div>
   </div>

@@ -30,6 +30,13 @@
 
 #heart {
 	font-size: 25px;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: $light-green;
+  color: white;
+}
+
+#heart:hover {
+  color: $light-green;
 }
 
 #heart:focus {
@@ -45,4 +52,8 @@
 	flex-direction: row;
 	justify-content: center;
 	margin-top: 20px;
+}
+
+.filledhearth {
+  color: $light-green;
 }
